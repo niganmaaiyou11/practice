@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite *)",
+      "Bash(python3 -c \"import py_compile; py_compile.compile\\('c:/Users/aiyouniganma512/Desktop/git/tokens统计/backend/scripts/scrape_llm_stats.py', doraise=True\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import py_compile; py_compile.compile\\('c:/Users/aiyouniganma512/Desktop/git/tokens统计/backend/scripts/scrape_llm_stats.py', doraise=True\\); print\\('OK'\\)\")",
+      "Bash(py -c \"import py_compile; py_compile.compile\\('c:/Users/aiyouniganma512/Desktop/git/tokens统计/backend/scripts/scrape_llm_stats.py', doraise=True\\); print\\('OK'\\)\")",
+      "Bash(python -c ' *)",
+      "WebFetch(domain:llm-stats.com)",
+      "WebSearch",
+      "Bash(git -C \"c:/Users/aiyouniganma512/Desktop/git\" ls-files --cached)"
+    ]
+  }
+}

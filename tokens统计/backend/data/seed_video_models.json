@@ -1,0 +1,595 @@
+[
+  {
+    "id": "grok-imagine-video",
+    "name": "Grok Imagine Video",
+    "provider": {
+      "id": "xai",
+      "name": "xAI"
+    },
+    "category": "video",
+    "overall_score": 2593.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2593.0,
+    "latency": 27.92
+  },
+  {
+    "id": "kling-v2.5-turbo-pro",
+    "name": "Kling v2.5 Turbo Pro",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": 2591.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2591.0,
+    "latency": 135.72
+  },
+  {
+    "id": "veo-3.1-generate-preview",
+    "name": "Veo 3.1",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "video",
+    "overall_score": 2521.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2521.0,
+    "latency": 53.55
+  },
+  {
+    "id": "kling-v2.6",
+    "name": "Kling v2.6 Pro",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": 2495.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2495.0,
+    "latency": 149.78
+  },
+  {
+    "id": "veo-3.0-fast-generate-001",
+    "name": "Veo 3.0 Fast",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "video",
+    "overall_score": 2486.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2486.0,
+    "latency": 43.05
+  },
+  {
+    "id": "veo-3.1-fast-generate-preview",
+    "name": "Veo 3.1 Fast",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "video",
+    "overall_score": 2483.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2483.0,
+    "latency": 61.45
+  },
+  {
+    "id": "veo-3.0-generate-001",
+    "name": "Veo 3.0",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "video",
+    "overall_score": 2450.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2450.0,
+    "latency": 143.45
+  },
+  {
+    "id": "wan-2.6-i2v",
+    "name": "WAN Video 2.6 I2V",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": 2374.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2374.0,
+    "latency": 52.68
+  },
+  {
+    "id": "seedance-1.5-pro",
+    "name": "Seedance 1.5 Pro",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": 2365.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2365.0,
+    "latency": 88.73
+  },
+  {
+    "id": "wan-2.5-i2v",
+    "name": "WAN Video 2.5 Image-to-Video",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": 2362.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2362.0,
+    "latency": 81.77
+  },
+  {
+    "id": "seedance-1-pro",
+    "name": "SeeDance 1 Pro",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": 2343.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2343.0,
+    "latency": 62.42
+  },
+  {
+    "id": "hailuo-02",
+    "name": "Hailuo 02",
+    "provider": {
+      "id": "minimax",
+      "name": "MiniMax"
+    },
+    "category": "video",
+    "overall_score": 2310.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2310.0,
+    "latency": 81.71
+  },
+  {
+    "id": "kling-v2.1-master",
+    "name": "Kling v2.1 Master",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": 2291.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2291.0,
+    "latency": 213.27
+  },
+  {
+    "id": "hailuo-2.3",
+    "name": "Hailuo 2.3",
+    "provider": {
+      "id": "minimax",
+      "name": "MiniMax"
+    },
+    "category": "video",
+    "overall_score": 2280.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2280.0,
+    "latency": 98.97
+  },
+  {
+    "id": "seedance-1-lite",
+    "name": "SeeDance 1 Lite",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": 2240.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2240.0,
+    "latency": 71.61
+  },
+  {
+    "id": "sora-2",
+    "name": "Sora 2",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "video",
+    "overall_score": 2223.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2223.0,
+    "latency": 97.41
+  },
+  {
+    "id": "seedance-1-pro-fast",
+    "name": "SeeDance 1 Pro Fast",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": 2166.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2166.0,
+    "latency": 35.33
+  },
+  {
+    "id": "ltx-2.3-fast",
+    "name": "LTX-2.3 Fast",
+    "provider": {
+      "id": "lightricks",
+      "name": "Lightricks"
+    },
+    "category": "video",
+    "overall_score": 2022.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 2022.0,
+    "latency": 41.81
+  },
+  {
+    "id": "ltx-2-19b",
+    "name": "LTX-2 19B",
+    "provider": {
+      "id": "lightricks",
+      "name": "Lightricks"
+    },
+    "category": "video",
+    "overall_score": 1993.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1993.0,
+    "latency": 42.88
+  },
+  {
+    "id": "sora-2-pro",
+    "name": "Sora 2 Pro",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "video",
+    "overall_score": 1988.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1988.0,
+    "latency": 168.01
+  },
+  {
+    "id": "veo-2.0-generate-001",
+    "name": "Veo 2.0",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "video",
+    "overall_score": 1836.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1836.0
+  },
+  {
+    "id": "wan-2.1-14b",
+    "name": "Wan 2.1 14B",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": 1577.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1577.0,
+    "latency": 185.21
+  },
+  {
+    "id": "t2v-01-director",
+    "name": "T2V-01-Director",
+    "provider": {
+      "id": "minimax",
+      "name": "MiniMax"
+    },
+    "category": "video",
+    "overall_score": 1547.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1547.0,
+    "latency": 179.26
+  },
+  {
+    "id": "hunyuan-video",
+    "name": "Hunyuan Video",
+    "provider": {
+      "id": "tencent",
+      "name": "Tencent"
+    },
+    "category": "video",
+    "overall_score": 1155.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 1155.0,
+    "latency": 747.22
+  },
+  {
+    "id": "wan-2.6-t2v",
+    "name": "WAN Video 2.6",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": 577.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 577.0,
+    "latency": 69.76
+  },
+  {
+    "id": "hunyuan-video-1.5",
+    "name": "HunyuanVideo 1.5",
+    "provider": {
+      "id": "tencent",
+      "name": "Tencent"
+    },
+    "category": "video",
+    "overall_score": 568.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": 568.0
+  },
+  {
+    "id": "kling-v3-omni-video",
+    "name": "Kling v3 Omni Video",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": -125.0,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "arena_rating": -125.0,
+    "latency": 110.07
+  },
+  {
+    "id": "happyhorse-1.0",
+    "name": "Happy Horse 1.0",
+    "provider": {
+      "id": "happy horse",
+      "name": "Happy Horse"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 86.17
+  },
+  {
+    "id": "kling-v3",
+    "name": "Kling v3",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 93.34
+  },
+  {
+    "id": "krea-realtime",
+    "name": "Krea Realtime",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 239.57
+  },
+  {
+    "id": "ltx-2.3-pro",
+    "name": "LTX-2.3 Pro",
+    "provider": {
+      "id": "lightricks",
+      "name": "Lightricks"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 70.89
+  },
+  {
+    "id": "ltx-2-fast",
+    "name": "LTX-2 Fast",
+    "provider": {
+      "id": "lightricks",
+      "name": "Lightricks"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "ltx-2-pro",
+    "name": "LTX-2 Pro",
+    "provider": {
+      "id": "lightricks",
+      "name": "Lightricks"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "mochi-1",
+    "name": "Mochi 1",
+    "provider": {
+      "id": "genmo",
+      "name": "Genmo"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 671.18
+  },
+  {
+    "id": "seedance-2.0-fast",
+    "name": "Seedance 2.0 Fast",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 118.18
+  },
+  {
+    "id": "seedance-2.0-pro",
+    "name": "Seedance 2.0 Pro",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 184.6
+  },
+  {
+    "id": "wan-2.2-a14b",
+    "name": "Wan 2.2 A14B",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 312.52
+  },
+  {
+    "id": "wan-v2.7",
+    "name": "WAN 2.7",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "video",
+    "overall_score": null,
+    "pricing": {},
+    "modalities": [
+      "video"
+    ],
+    "latency": 66.05
+  }
+]

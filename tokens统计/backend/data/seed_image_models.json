@@ -1,0 +1,758 @@
+[
+  {
+    "id": "gpt-image-2",
+    "name": "GPT Image 2",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "image",
+    "overall_score": 2904.0,
+    "pricing": {
+      "input": 0.053
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.053,
+    "output_resolution": "2K",
+    "arena_rating": 2904.0,
+    "latency": 81.96,
+    "tokens_per_second": 0.011666666666666665
+  },
+  {
+    "id": "gemini-3-pro-image-preview",
+    "name": "Gemini 3 Pro Image",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "image",
+    "overall_score": 56.5,
+    "pricing": {
+      "input": 0.13
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.13,
+    "output_resolution": "2K",
+    "arena_rating": 2652.0,
+    "latency": 46.92,
+    "tokens_per_second": 0.0033333333333333335
+  },
+  {
+    "id": "seedream-4.5",
+    "name": "Seedream 4.5",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "image",
+    "overall_score": 2646.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "2K",
+    "arena_rating": 2646.0,
+    "latency": 48.54,
+    "tokens_per_second": 0.011666666666666665
+  },
+  {
+    "id": "gpt-image-1.5",
+    "name": "GPT Image 1.5",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "image",
+    "overall_score": 2592.0,
+    "pricing": {
+      "input": 0.05
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.05,
+    "output_resolution": "2K",
+    "arena_rating": 2592.0,
+    "latency": 49.97,
+    "tokens_per_second": 0.018333333333333333
+  },
+  {
+    "id": "hunyuan-image-3",
+    "name": "Hunyuan Image 3",
+    "provider": {
+      "id": "tencent",
+      "name": "Tencent"
+    },
+    "category": "image",
+    "overall_score": 2575.0,
+    "pricing": {
+      "input": 0.09
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.09,
+    "output_resolution": "2K",
+    "arena_rating": 2575.0,
+    "latency": 65.85,
+    "tokens_per_second": 0.016666666666666666
+  },
+  {
+    "id": "gemini-2.5-flash-image",
+    "name": "Gemini 2.5 Flash Image (Nano Banana)",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "image",
+    "overall_score": 28.2,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "2K",
+    "arena_rating": 2574.0,
+    "latency": 30.98,
+    "tokens_per_second": 0.01
+  },
+  {
+    "id": "gemini-3.1-flash-image-preview",
+    "name": "Gemini 3.1 Flash Image",
+    "provider": {
+      "id": "google",
+      "name": "Google"
+    },
+    "category": "image",
+    "overall_score": 2541.0,
+    "pricing": {
+      "input": 0.02
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.02,
+    "output_resolution": "2K",
+    "arena_rating": 2541.0,
+    "latency": 44.77,
+    "tokens_per_second": 0.005
+  },
+  {
+    "id": "kling-v3-omni-image",
+    "name": "Kling v3 Omni Image",
+    "provider": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "category": "image",
+    "overall_score": 2523.0,
+    "pricing": {
+      "input": 0.028
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.028,
+    "output_resolution": "2K",
+    "arena_rating": 2523.0,
+    "latency": 54.07,
+    "tokens_per_second": 0.018333333333333333
+  },
+  {
+    "id": "grok-imagine-image",
+    "name": "Grok Imagine Image",
+    "provider": {
+      "id": "xai",
+      "name": "xAI"
+    },
+    "category": "image",
+    "overall_score": 2520.0,
+    "pricing": {
+      "input": 0.02
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.02,
+    "output_resolution": "2K",
+    "arena_rating": 2520.0,
+    "latency": 11.98,
+    "tokens_per_second": 0.10833333333333334
+  },
+  {
+    "id": "reve",
+    "name": "Reve",
+    "provider": {
+      "id": "reve",
+      "name": "Reve"
+    },
+    "category": "image",
+    "overall_score": 2438.0,
+    "pricing": {
+      "input": 0.18
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.18,
+    "output_resolution": "2K",
+    "arena_rating": 2438.0,
+    "latency": 18.74,
+    "tokens_per_second": 0.065
+  },
+  {
+    "id": "seedream-4",
+    "name": "Seedream 4",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "image",
+    "overall_score": 2406.0,
+    "pricing": {
+      "input": 0.03
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.03,
+    "output_resolution": "4K",
+    "arena_rating": 2406.0,
+    "latency": 35.0,
+    "tokens_per_second": 0.030000000000000002
+  },
+  {
+    "id": "flux-2-pro",
+    "name": "Flux 2 Pro",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 2386.0,
+    "pricing": {
+      "input": 0.02
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.02,
+    "output_resolution": "4K",
+    "arena_rating": 2386.0,
+    "latency": 25.65,
+    "tokens_per_second": 0.03166666666666666
+  },
+  {
+    "id": "flux-2-max",
+    "name": "Flux 2 Max",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 2383.0,
+    "pricing": {
+      "input": 0.07
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.07,
+    "output_resolution": "2K",
+    "arena_rating": 2383.0,
+    "latency": 50.51,
+    "tokens_per_second": 0.016666666666666666
+  },
+  {
+    "id": "flux-kontext-pro",
+    "name": "Flux Kontext Pro",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 2285.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "4K",
+    "arena_rating": 2285.0,
+    "latency": 27.49,
+    "tokens_per_second": 0.035
+  },
+  {
+    "id": "flux-2-flex",
+    "name": "Flux 2 Flex",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 2261.0,
+    "pricing": {
+      "input": 0.05
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.05,
+    "output_resolution": "2K",
+    "arena_rating": 2261.0,
+    "latency": 26.8,
+    "tokens_per_second": 0.03166666666666666
+  },
+  {
+    "id": "gpt-image-1",
+    "name": "GPT Image 1",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "image",
+    "overall_score": 2139.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "2K",
+    "arena_rating": 2139.0,
+    "latency": 51.51,
+    "tokens_per_second": 0.018333333333333333
+  },
+  {
+    "id": "qwen-image-edit",
+    "name": "Qwen Image Edit",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "image",
+    "overall_score": 2129.0,
+    "pricing": {
+      "input": 0.03
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.03,
+    "output_resolution": "4K",
+    "arena_rating": 2129.0,
+    "latency": 17.92,
+    "tokens_per_second": 0.056666666666666664
+  },
+  {
+    "id": "flux-kontext-max",
+    "name": "Flux Kontext Max",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 2065.0,
+    "pricing": {
+      "input": 0.08
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.08,
+    "output_resolution": "4K",
+    "arena_rating": 2065.0,
+    "latency": 37.32,
+    "tokens_per_second": 0.025
+  },
+  {
+    "id": "gpt-image-1-mini",
+    "name": "GPT Image 1 Mini",
+    "provider": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "category": "image",
+    "overall_score": 1964.0,
+    "pricing": {
+      "input": 0.01
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.01,
+    "output_resolution": "2K",
+    "arena_rating": 1964.0,
+    "latency": 47.66,
+    "tokens_per_second": 0.021666666666666667
+  },
+  {
+    "id": "flux-1.1-pro",
+    "name": "Flux 1.1 Pro",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 1883.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "4K",
+    "arena_rating": 1883.0,
+    "latency": 12.25,
+    "tokens_per_second": 0.08166666666666668
+  },
+  {
+    "id": "riverflow-2.0-pro",
+    "name": "Riverflow 2.0 Pro",
+    "provider": {
+      "id": "riverflow",
+      "name": "Riverflow"
+    },
+    "category": "image",
+    "overall_score": 1656.0,
+    "pricing": {
+      "input": 0.15
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.15,
+    "output_resolution": "4K",
+    "arena_rating": 1656.0,
+    "latency": 99.12,
+    "tokens_per_second": 0.01
+  },
+  {
+    "id": "flux-1.1-pro-ultra",
+    "name": "Flux 1.1 Pro Ultra",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 1623.0,
+    "pricing": {
+      "input": 0.06
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.06,
+    "output_resolution": "4K",
+    "arena_rating": 1623.0,
+    "latency": 30.43,
+    "tokens_per_second": 0.03166666666666666
+  },
+  {
+    "id": "riverflow-2.0-fast",
+    "name": "Riverflow 2.0 Fast",
+    "provider": {
+      "id": "riverflow",
+      "name": "Riverflow"
+    },
+    "category": "image",
+    "overall_score": 1508.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "4K",
+    "arena_rating": 1508.0,
+    "latency": 73.33,
+    "tokens_per_second": 0.015000000000000001
+  },
+  {
+    "id": "flux-2-klein",
+    "name": "Flux 2 Klein",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": 1414.0,
+    "pricing": {
+      "input": 0.02
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.02,
+    "output_resolution": "4K",
+    "arena_rating": 1414.0,
+    "latency": 9.99,
+    "tokens_per_second": 0.15333333333333332
+  },
+  {
+    "id": "flux-2-dev-turbo",
+    "name": "Flux 2 Dev Turbo",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": -120.0,
+    "pricing": {
+      "input": 0.008
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.008,
+    "output_resolution": "2K",
+    "arena_rating": -120.0,
+    "latency": 12.24,
+    "tokens_per_second": 0.11666666666666667
+  },
+  {
+    "id": "qwen-image-2.0",
+    "name": "Qwen Image 2.0",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "image",
+    "overall_score": -185.0,
+    "pricing": {
+      "input": 0.035
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.035,
+    "output_resolution": "2K",
+    "arena_rating": -185.0,
+    "latency": 653.06,
+    "tokens_per_second": 0.051666666666666666
+  },
+  {
+    "id": "stable-diffusion-3.5-large",
+    "name": "Stable Diffusion 3.5 Large",
+    "provider": {
+      "id": "stability ai",
+      "name": "Stability AI"
+    },
+    "category": "image",
+    "overall_score": -187.0,
+    "pricing": {
+      "input": 0.065
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.065,
+    "output_resolution": "2K",
+    "arena_rating": -187.0,
+    "latency": 89.42,
+    "tokens_per_second": 0.016666666666666666
+  },
+  {
+    "id": "qwen-image",
+    "name": "Qwen Image",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "image",
+    "overall_score": -284.0,
+    "pricing": {
+      "input": 0.03
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.03,
+    "output_resolution": "4K",
+    "arena_rating": -284.0,
+    "latency": 14.31,
+    "tokens_per_second": 0.08
+  },
+  {
+    "id": "seedream-3",
+    "name": "Seedream 3",
+    "provider": {
+      "id": "bytedance",
+      "name": "ByteDance"
+    },
+    "category": "image",
+    "overall_score": -292.0,
+    "pricing": {
+      "input": 0.03
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.03,
+    "output_resolution": "4K",
+    "arena_rating": -292.0,
+    "latency": 10.75,
+    "tokens_per_second": 0.041666666666666664
+  },
+  {
+    "id": "flux-2-dev",
+    "name": "Flux 2 Dev",
+    "provider": {
+      "id": "black forest labs",
+      "name": "Black Forest Labs"
+    },
+    "category": "image",
+    "overall_score": -293.0,
+    "pricing": {
+      "input": 0.012
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.012,
+    "output_resolution": "2K",
+    "arena_rating": -293.0,
+    "latency": 21.41,
+    "tokens_per_second": 0.11
+  },
+  {
+    "id": "glm-image",
+    "name": "GLM Image",
+    "provider": {
+      "id": "zhipu ai",
+      "name": "Zhipu AI"
+    },
+    "category": "image",
+    "overall_score": -303.0,
+    "pricing": {
+      "input": 0.05
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.05,
+    "output_resolution": "2K",
+    "arena_rating": -303.0,
+    "latency": 71.21,
+    "tokens_per_second": 0.0016666666666666668
+  },
+  {
+    "id": "recraft-v3",
+    "name": "Recraft V3",
+    "provider": {
+      "id": "recraft",
+      "name": "Recraft"
+    },
+    "category": "image",
+    "overall_score": -309.0,
+    "pricing": {
+      "input": 0.04
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.04,
+    "output_resolution": "4K",
+    "arena_rating": -309.0,
+    "latency": 16.66,
+    "tokens_per_second": 0.07
+  },
+  {
+    "id": "qwen-image-2512",
+    "name": "Qwen Image 2512",
+    "provider": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "category": "image",
+    "overall_score": -338.0,
+    "pricing": {
+      "input": 0.02
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.02,
+    "output_resolution": "2K",
+    "arena_rating": -338.0,
+    "latency": 37.15,
+    "tokens_per_second": 0.035
+  },
+  {
+    "id": "cogView-4-250304",
+    "name": "CogView 4",
+    "provider": {
+      "id": "zhipu ai",
+      "name": "Zhipu AI"
+    },
+    "category": "image",
+    "overall_score": -459.0,
+    "pricing": {
+      "input": 0.03
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.03,
+    "output_resolution": "2K",
+    "arena_rating": -459.0,
+    "latency": 17.86,
+    "tokens_per_second": 0.01
+  },
+  {
+    "id": "z-image-turbo",
+    "name": "Z Image Turbo",
+    "provider": {
+      "id": "z image",
+      "name": "Z Image"
+    },
+    "category": "image",
+    "overall_score": -607.0,
+    "pricing": {
+      "input": 0.005
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.005,
+    "output_resolution": "2K",
+    "arena_rating": -607.0,
+    "latency": 8.99,
+    "tokens_per_second": 0.125
+  },
+  {
+    "id": "bagel",
+    "name": "Bagel",
+    "provider": {
+      "id": "bagel",
+      "name": "Bagel"
+    },
+    "category": "image",
+    "overall_score": -912.0,
+    "pricing": {
+      "input": 0.1
+    },
+    "modalities": [
+      "image"
+    ],
+    "price_input": 0.1,
+    "output_resolution": "2K",
+    "arena_rating": -912.0,
+    "latency": 126.2,
+    "tokens_per_second": 0.006666666666666667
+  }
+]
