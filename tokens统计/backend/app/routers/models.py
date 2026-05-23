@@ -39,7 +39,7 @@ def get_providers(user: User = Depends(get_current_user)):
 
 @router.post("/models/sync")
 def sync_models(user: User = Depends(get_current_user)):
-    """Trigger a sync from OpenRouter + LiteLLM and return the updated registry."""
+    """Trigger a sync from model sources and return the updated registry."""
     try:
         result = subprocess.run(
             [sys.executable, str(SCRIPTS_DIR / "sync_models.py")],

@@ -46,9 +46,9 @@
         >
           <el-option
             v-for="p in providers"
-            :key="p"
-            :label="p"
-            :value="p"
+            :key="p.name"
+            :label="`${p.name} (${p.count})`"
+            :value="p.name"
           />
         </el-select>
       </el-form-item>
@@ -58,9 +58,12 @@
           :placeholder="loc.t.form.selectModel"
           filterable
           allow-create
+          remote
+          :remote-method="filterModels"
+          @visible-change="onModelDropdownVisible"
         >
           <el-option
-            v-for="m in modelOptions"
+            v-for="m in filteredModelOptions"
             :key="m"
             :label="m"
             :value="m"
@@ -134,11 +137,24 @@ const modelsStore = useModelsStore()
 const formRef = ref<FormInstance>()
 const submitting = ref(false)
 
-const providers = computed(() => modelsStore.providerNames)
+const modelSearch = ref('')
+
+const providers = computed(() =>
+  modelsStore.registry.providers.map((provider) => ({
+    name: provider.name,
+    count: provider.models.length,
+  })),
+)
 
 const modelOptions = computed(() => {
   if (!form.value.provider) return []
   return modelsStore.modelsByProvider[form.value.provider] || []
+})
+
+const filteredModelOptions = computed(() => {
+  const keyword = modelSearch.value.trim().toLowerCase()
+  if (!keyword) return modelOptions.value
+  return modelOptions.value.filter((model) => model.toLowerCase().includes(keyword))
 })
 
 const form = ref<TokenUsageCreate>({
@@ -162,6 +178,7 @@ const rules = computed<FormRules>(() => ({
 
 watch(() => form.value.provider, () => {
   form.value.model_name = ''
+  modelSearch.value = ''
 })
 
 if (props.mode === 'edit') {
@@ -181,6 +198,14 @@ if (props.mode === 'edit') {
     },
     { immediate: true },
   )
+}
+
+function filterModels(keyword: string) {
+  modelSearch.value = keyword
+}
+
+function onModelDropdownVisible(visible: boolean) {
+  if (visible) modelSearch.value = ''
 }
 
 async function onSyncModels() {

@@ -1,12 +1,13 @@
 """
-Sync vendor/model registry from OpenRouter and LiteLLM community data.
+Sync vendor/model registry from OpenRouter, LiteLLM community data, and local supplemental entries.
 
 Usage: (cd backend && python scripts/sync_models.py)
 """
 from __future__ import annotations
-import json
 import hashlib
+import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -16,14 +17,14 @@ MODELS_PATH = os.path.join(
     "data", "models.json"
 )
 
-# Whitelist: only these provider IDs are included in output.
-# Maps raw IDs from OpenRouter/LiteLLM → canonical id, display name, color.
 PROVIDER_WHITELIST: dict[str, tuple[str, str, str]] = {
     # Major Western
     "openai":          ("openai",     "OpenAI",              "#10a37f"),
     "anthropic":       ("anthropic",  "Anthropic",           "#d97757"),
+    "claude":          ("anthropic",  "Anthropic",           "#d97757"),
     "google":          ("google",     "Google",              "#4285f4"),
     "gemini":          ("google",     "Google",              "#4285f4"),
+    "google-ai-studio": ("google",    "Google",              "#4285f4"),
     "meta-llama":      ("meta",       "Meta",                "#0668e1"),
     "meta":            ("meta",       "Meta",                "#0668e1"),
     "mistralai":       ("mistral",    "Mistral",             "#f90"),
@@ -35,25 +36,52 @@ PROVIDER_WHITELIST: dict[str, tuple[str, str, str]] = {
     "ai21":            ("ai21",       "AI21 Labs",           "#14b8a6"),
     "reka":            ("reka",       "Reka",                "#6366f1"),
     "amazon":          ("amazon",     "Amazon",              "#ff9900"),
+    "bedrock":         ("amazon",     "Amazon",              "#ff9900"),
     "stability":       ("stability",  "Stability AI",        "#4834d4"),
     "nvidia":          ("nvidia",     "NVIDIA",              "#76b900"),
+    "together_ai":     ("together",   "Together AI",         "#111827"),
+    "together":        ("together",   "Together AI",         "#111827"),
+    "fireworks_ai":    ("fireworks",  "Fireworks AI",        "#f97316"),
+    "fireworks":       ("fireworks",  "Fireworks AI",        "#f97316"),
+    "groq":            ("groq",       "Groq",                "#f55036"),
+    "cerebras":        ("cerebras",   "Cerebras",            "#f97316"),
 
     # Chinese / Asian
     "deepseek":        ("deepseek",   "DeepSeek",            "#4d6bfe"),
     "alibaba":         ("alibaba",    "Alibaba (Qwen)",      "#ff6a00"),
     "qwen":            ("alibaba",    "Alibaba (Qwen)",      "#ff6a00"),
     "dashscope":       ("alibaba",    "Alibaba (Qwen)",      "#ff6a00"),
+    "aliyun":          ("alibaba",    "Alibaba (Qwen)",      "#ff6a00"),
     "zhipuai":         ("zhipu",      "Zhipu (GLM)",         "#3859ff"),
     "zhipu":           ("zhipu",      "Zhipu (GLM)",         "#3859ff"),
     "zai":             ("zhipu",      "Zhipu (GLM)",         "#3859ff"),
+    "bigmodel":        ("zhipu",      "Zhipu (GLM)",         "#3859ff"),
     "moonshotai":      ("moonshot",   "Moonshot (Kimi)",     "#8b5cf6"),
     "moonshot":        ("moonshot",   "Moonshot (Kimi)",     "#8b5cf6"),
+    "kimi":            ("moonshot",   "Moonshot (Kimi)",     "#8b5cf6"),
     "01-ai":           ("01ai",       "01.AI (Yi)",          "#ec4899"),
     "01ai":            ("01ai",       "01.AI (Yi)",          "#ec4899"),
+    "yi":              ("01ai",       "01.AI (Yi)",          "#ec4899"),
     "bytedance":       ("bytedance",  "ByteDance (Doubao)",  "#3252a8"),
+    "volcengine":      ("bytedance",  "ByteDance (Doubao)",  "#3252a8"),
+    "doubao":          ("bytedance",  "ByteDance (Doubao)",  "#3252a8"),
     "minimax":         ("minimax",    "MiniMax",             "#f59e0b"),
     "baichuan":        ("baichuan",   "Baichuan",            "#0891b2"),
     "stepfun":         ("stepfun",    "StepFun",             "#9333ea"),
+    "step":            ("stepfun",    "StepFun",             "#9333ea"),
+    "xiaomi":          ("xiaomi",     "Xiaomi",              "#ff6900"),
+    "mimo":            ("xiaomi",     "Xiaomi",              "#ff6900"),
+    "tencent":         ("tencent",    "Tencent (Hunyuan)",   "#0052d9"),
+    "hunyuan":         ("tencent",    "Tencent (Hunyuan)",   "#0052d9"),
+    "baidu":           ("baidu",      "Baidu (ERNIE)",       "#2932e1"),
+    "ernie":           ("baidu",      "Baidu (ERNIE)",       "#2932e1"),
+    "iflytek":         ("iflytek",    "iFlytek (Spark)",     "#e1251b"),
+    "spark":           ("iflytek",    "iFlytek (Spark)",     "#e1251b"),
+    "huawei":          ("huawei",     "Huawei (Pangu)",      "#cf0a2c"),
+    "pangu":           ("huawei",     "Huawei (Pangu)",      "#cf0a2c"),
+    "sensetime":       ("sensetime",  "SenseTime",           "#7c3aed"),
+    "sensenova":       ("sensetime",  "SenseTime",           "#7c3aed"),
+    "siliconflow":     ("siliconflow", "SiliconFlow",        "#111827"),
 
     # Enterprise / Other
     "ibm":             ("ibm",        "IBM",                 "#052fad"),
@@ -61,72 +89,125 @@ PROVIDER_WHITELIST: dict[str, tuple[str, str, str]] = {
     "databricks":      ("databricks", "Databricks",          "#ff3621"),
 }
 
-# Pattern-based filtering: keep only models matching these prefixes
-# This filters out fine-tuned variants, quantized versions, etc.
 MODEL_PREFIX_ALLOWLIST = [
-    # OpenAI — gpt-4o, gpt-4.1, gpt-5, gpt-5.3, gpt-5.4, gpt-5.5, o1, o3, o4, etc.
     "gpt-", "o1", "o1-", "o3", "o3-", "o4", "o4-", "computer-use",
-    # Anthropic
     "claude-",
-    # Google — gemini-2.5, gemini-3, gemini-3.1, gemma
     "gemini-", "gemma-", "palm",
-    # Meta
     "llama-",
-    # Mistral
     "mistral-", "codestral", "pixtral", "ministral",
-    # Cohere
     "command-", "c4ai-",
-    # DeepSeek
     "deepseek-",
-    # xAI
     "grok-",
-    # Perplexity
     "sonar", "pplx-",
-    # Qwen
     "qwen", "qvq",
-    # GLM / Zhipu
     "glm-", "cogview", "cogvideo",
-    # Kimi
     "moonshot-", "kimi",
-    # Yi
     "yi-",
-    # Doubao
     "doubao-", "skylark-",
-    # MiniMax
     "abab", "minimax-",
-    # Baichuan
     "baichuan",
-    # StepFun
     "step-",
-    # AI21
     "jamba-", "jurassic-",
-    # Reka
     "reka-",
-    # Amazon
     "nova-", "titan-",
-    # Stability
     "stable-",
-    # NVIDIA
     "nemotron-",
-    # IBM
     "granite-",
-    # Databricks
     "dbrx-",
-    # Perplexity (only native models, not re-hosts)
-    "sonar", "pplx-",
+    "hunyuan", "ernie", "spark", "pangu", "mimo", "sense", "sensenova",
 ]
 
-# Models to always exclude (deprecated, test, internal, speed variants)
 MODEL_EXCLUDE_PATTERNS = [
     "-dev", "-test", "-internal", "-eval", "-alpha", "-beta.",
     "ft-", "finetuned", "checkpoint", "deprecated", "-legacy", "-old",
     "-eval-", "-quant", "gguf", "gptq", "awq",
     "self-moderated", "papaya", "panda",
-    # Speed/dated variants — keep only the canonical model name
     "-fast", "-non-reasoning", "-reasoning",
-    # Not actual OpenAI models
     "gpt-oss",
 ]
+
+SUPPLEMENTAL_PROVIDERS: dict[str, tuple[str, str, list[str]]] = {
+    "xiaomi": ("Xiaomi", "#ff6900", [
+        "MiMo-VL-7B-RL",
+        "MiMo-7B-RL",
+        "MiMo-7B-SFT",
+        "MiMo-7B-Base",
+        "MiMo-7B-RL-Zero",
+    ]),
+    "tencent": ("Tencent (Hunyuan)", "#0052d9", [
+        "hunyuan-turbos-latest",
+        "hunyuan-turbo-latest",
+        "hunyuan-large",
+        "hunyuan-standard",
+        "hunyuan-lite",
+    ]),
+    "baidu": ("Baidu (ERNIE)", "#2932e1", [
+        "ernie-4.5-turbo-vl",
+        "ernie-4.5-turbo-128k",
+        "ernie-4.5-turbo-32k",
+        "ernie-4.5-turbo-8k",
+        "ernie-x1-turbo-32k",
+        "ernie-4.0-turbo-8k",
+        "ernie-3.5-8k",
+    ]),
+    "iflytek": ("iFlytek (Spark)", "#e1251b", [
+        "spark-x1",
+        "spark-max-32k",
+        "spark-max",
+        "spark-pro-128k",
+        "spark-pro",
+        "spark-lite",
+    ]),
+    "huawei": ("Huawei (Pangu)", "#cf0a2c", [
+        "pangu-ultra-moe",
+        "pangu-pro-moe",
+        "pangu-lite",
+    ]),
+    "sensetime": ("SenseTime", "#7c3aed", [
+        "SenseNova-V6-5",
+        "SenseNova-V6-Pro",
+        "SenseNova-V6-Reasoner",
+        "SenseNova-V5-5",
+    ]),
+}
+
+MODEL_RELEASE_DATES = {
+    "claude-opus-4.7": "2026-05-18",
+    "claude-opus-4.6": "2026-03-03",
+    "claude-sonnet-4.6": "2026-02-12",
+    "claude-opus-4.5": "2025-11-24",
+    "claude-sonnet-4.5": "2025-09-29",
+    "claude-haiku-4.5": "2025-10-15",
+    "claude-opus-4.1": "2025-08-05",
+    "claude-opus-4": "2025-05-22",
+    "claude-sonnet-4": "2025-05-22",
+    "claude-3.5-haiku": "2024-10-22",
+    "claude-3-haiku": "2024-03-07",
+    "gpt-5.5": "2026-05-01",
+    "gpt-5.4": "2026-04-01",
+    "gpt-5.3": "2026-03-01",
+    "gpt-5.2": "2026-02-01",
+    "gpt-5.1": "2026-01-01",
+    "gpt-5": "2025-08-07",
+    "gpt-4.1": "2025-04-14",
+    "gpt-4o": "2024-05-13",
+    "o4-mini": "2025-04-16",
+    "o3": "2025-04-16",
+    "o3-mini": "2025-01-31",
+    "o1": "2024-12-05",
+    "deepseek-v4-pro": "2026-05-01",
+    "deepseek-v4-flash": "2026-04-01",
+    "deepseek-v3.2": "2025-12-01",
+    "deepseek-v3.1": "2025-08-21",
+    "deepseek-r1-0528": "2025-05-28",
+    "deepseek-chat-v3-0324": "2025-03-24",
+    "deepseek-r1": "2025-01-20",
+    "MiMo-VL-7B-RL": "2025-05-01",
+    "MiMo-7B-RL": "2025-04-30",
+    "MiMo-7B-SFT": "2025-04-30",
+    "MiMo-7B-Base": "2025-04-30",
+    "MiMo-7B-RL-Zero": "2025-04-30",
+}
 
 
 def _color(pid: str) -> str:
@@ -135,7 +216,6 @@ def _color(pid: str) -> str:
 
 
 def _allow_model(name: str) -> bool:
-    """Check if a model name passes the prefix allowlist and exclusion filter."""
     lower = name.lower()
     for pat in MODEL_EXCLUDE_PATTERNS:
         if pat in lower:
@@ -146,6 +226,19 @@ def _allow_model(name: str) -> bool:
     return False
 
 
+def _ensure_provider(providers: dict[str, dict], pid: str, name: str, color: str) -> dict:
+    if pid not in providers:
+        providers[pid] = {"id": pid, "name": name, "color": color, "models": set()}
+    return providers[pid]
+
+
+def _add_model(providers: dict[str, dict], raw_pid: str, model_name: str) -> None:
+    if raw_pid not in PROVIDER_WHITELIST or not _allow_model(model_name):
+        return
+    canonical_id, display_name, color = PROVIDER_WHITELIST[raw_pid]
+    _ensure_provider(providers, canonical_id, display_name, color)["models"].add(model_name)
+
+
 def load_existing():
     if not os.path.exists(MODELS_PATH):
         return {}
@@ -154,7 +247,6 @@ def load_existing():
 
 
 def fetch_openrouter():
-    """Fetch models from OpenRouter public API."""
     providers: dict[str, dict] = {}
     try:
         req = urllib.request.Request(
@@ -168,17 +260,7 @@ def fetch_openrouter():
             if "/" not in raw_id:
                 continue
             raw_pid, model_name = raw_id.split("/", 1)
-            if raw_pid not in PROVIDER_WHITELIST:
-                continue
-            if not _allow_model(model_name):
-                continue
-            canonical_id, display_name, color = PROVIDER_WHITELIST[raw_pid]
-            pid = canonical_id
-            if pid not in providers:
-                providers[pid] = {
-                    "id": pid, "name": display_name, "color": color, "models": set()
-                }
-            providers[pid]["models"].add(model_name)
+            _add_model(providers, raw_pid, model_name)
         total = sum(len(p["models"]) for p in providers.values())
         print(f"  OpenRouter: {len(providers)} providers, {total} models")
     except Exception as e:
@@ -187,7 +269,6 @@ def fetch_openrouter():
 
 
 def fetch_litellm():
-    """Fetch models from LiteLLM community JSON as enrichment."""
     providers: dict[str, dict] = {}
     try:
         req = urllib.request.Request(
@@ -200,17 +281,7 @@ def fetch_litellm():
             if "/" not in key:
                 continue
             raw_pid, model_name = key.split("/", 1)
-            if raw_pid not in PROVIDER_WHITELIST:
-                continue
-            if not _allow_model(model_name):
-                continue
-            canonical_id, display_name, color = PROVIDER_WHITELIST[raw_pid]
-            pid = canonical_id
-            if pid not in providers:
-                providers[pid] = {
-                    "id": pid, "name": display_name, "color": color, "models": set()
-                }
-            providers[pid]["models"].add(model_name)
+            _add_model(providers, raw_pid, model_name)
         total = sum(len(p["models"]) for p in providers.values())
         print(f"  LiteLLM: {len(providers)} providers, {total} models")
     except Exception as e:
@@ -218,67 +289,102 @@ def fetch_litellm():
     return providers
 
 
-def _parse_version(name: str) -> tuple:
-    """Extract a sortable version tuple from a model name. Higher = newer.
-
-    Date-based versions (e.g. qwen-plus-2025-07-28 where 2025 is a year) are
-    demoted so semantic versions (e.g. qwen3.6-plus -> 3.6) sort above them.
-    Padded to length 4 so (3,6) correctly sorts above (3,) after negation.
-    """
-    import re
-    low = name.lower()
-    nums = re.findall(r'(\d+)', low)
-    ver = tuple(int(n) for n in nums) if nums else (0,)
-    if ver and ver[0] >= 2020:
-        ver = (0,) + ver
-    while len(ver) < 4:
-        ver = ver + (0,)
-    return ver[:4]
+def supplemental_providers():
+    providers: dict[str, dict] = {}
+    for pid, (name, color, models) in SUPPLEMENTAL_PROVIDERS.items():
+        pdata = _ensure_provider(providers, pid, name, color)
+        pdata["models"].update(models)
+    total = sum(len(p["models"]) for p in providers.values())
+    print(f"  Supplemental: {len(providers)} providers, {total} models")
+    return providers
 
 
-def clamp_models(models: list[str], max_per_provider: int = 30) -> list[str]:
-    """Keep the newest/most important models per provider, limit to max_per_provider."""
-    if len(models) <= max_per_provider:
-        return sorted(models)
-    # Sort by version number descending (newest first), then alphabetically
-    # We negate the version tuple for descending sort
-    def sort_key(m: str) -> tuple:
-        ver = _parse_version(m)
-        # Negate for descending: larger version first
-        neg_ver = tuple(-v for v in ver)
-        # Prefer shorter names (less dated variants)
-        return (neg_ver, len(m), m.lower())
-    return sorted(models, key=sort_key)[:max_per_provider]
+def _parse_date(name: str) -> tuple[int, int, int]:
+    explicit = MODEL_RELEASE_DATES.get(name) or MODEL_RELEASE_DATES.get(name.lower())
+    if explicit:
+        return tuple(int(part) for part in explicit.split("-"))
+
+    lower = name.lower()
+    match = re.search(r"(20\d{2})[-_.]?(0[1-9]|1[0-2])[-_.]?([0-3]\d)", lower)
+    if match:
+        return tuple(int(part) for part in match.groups())
+
+    match = re.search(r"(?<!\d)(\d{2})(0[1-9]|1[0-2])([0-3]\d)(?!\d)", lower)
+    if match:
+        year, month, day = (int(part) for part in match.groups())
+        return (2000 + year, month, day)
+
+    match = re.search(r"(?<!\d)(\d{2})(0[1-9]|1[0-2])(?!\d)", lower)
+    if match:
+        year, month = (int(part) for part in match.groups())
+        return (2000 + year, month, 1)
+
+    return (0, 0, 0)
+
+
+def _parse_version(name: str) -> tuple[int, int, int, int]:
+    lower = name.lower()
+    version_match = re.search(r"(?:^|[-_.])(?:v|r)?(\d+)(?:[.-](\d+))?(?:[.-](\d+))?(?:[.-](\d+))?", lower)
+    if not version_match:
+        nums = re.findall(r"\d+", lower)
+        version = tuple(int(n) for n in nums if int(n) < 2000)
+    else:
+        version = tuple(int(n) for n in version_match.groups(default="0"))
+    while len(version) < 4:
+        version = version + (0,)
+    return version[:4]
+
+
+def model_sort_key(name: str) -> tuple:
+    lower = name.lower()
+    deprecated = any(word in lower for word in ("deprecated", "legacy", "preview"))
+    latest = any(word in lower for word in ("latest", "stable"))
+    return (
+        deprecated,
+        tuple(-value for value in _parse_date(name)),
+        tuple(-value for value in _parse_version(name)),
+        not latest,
+        len(name),
+        lower,
+    )
+
+
+def clamp_models(models: list[str], max_per_provider: int = 40) -> list[str]:
+    return sorted(models, key=model_sort_key)[:max_per_provider]
 
 
 def main():
-    print("Syncing model registry from OpenRouter + LiteLLM...")
+    print("Syncing model registry from OpenRouter + LiteLLM + supplemental data...")
 
     existing = load_existing()
-    existing_map: dict[str, dict] = {}
-    for p in existing.get("providers", []):
-        existing_map[p["id"]] = p
+    existing_map: dict[str, dict] = {p["id"]: p for p in existing.get("providers", [])}
 
-    or_providers = fetch_openrouter()
-    llm_providers = fetch_litellm()
+    source_providers = [fetch_openrouter(), fetch_litellm(), supplemental_providers()]
 
-    # Merge
     merged: dict[str, dict] = {}
-    for pid, pdata in or_providers.items():
-        merged[pid] = pdata
-    for pid, pdata in llm_providers.items():
-        if pid in merged:
-            merged[pid]["models"] |= pdata["models"]
-        else:
-            merged[pid] = pdata
+    for source in source_providers:
+        for pid, pdata in source.items():
+            if pid in merged:
+                merged[pid]["models"] |= pdata["models"]
+            else:
+                merged[pid] = pdata
 
-    # Build result, clamping model counts
+    for pid, pdata in existing_map.items():
+        if pid not in merged:
+            merged[pid] = {
+                "id": pid,
+                "name": pdata.get("name", pid),
+                "color": pdata.get("color", _color(pid)),
+                "models": set(pdata.get("models", [])),
+            }
+        else:
+            merged[pid]["models"].update(pdata.get("models", []))
+
     result_providers = []
     for pid, pdata in merged.items():
-        models = clamp_models(sorted(pdata["models"]))
+        models = clamp_models(list(pdata["models"]))
         if not models:
             continue
-        # Preserve existing display name / color if present
         if pid in existing_map:
             pdata["name"] = existing_map[pid].get("name", pdata["name"])
             pdata["color"] = existing_map[pid].get("color", pdata["color"])
@@ -294,12 +400,13 @@ def main():
     result = {
         "providers": result_providers,
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source": "openrouter+lite-llm",
+        "source": "openrouter+lite-llm+supplemental",
     }
 
     os.makedirs(os.path.dirname(MODELS_PATH), exist_ok=True)
     with open(MODELS_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
     total_models = sum(len(p["models"]) for p in result_providers)
     print(f"Done: {len(result_providers)} providers, {total_models} models → {MODELS_PATH}")

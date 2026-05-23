@@ -13,11 +13,23 @@
       "name": "Alibaba (Qwen)",
       "color": "#ff6a00",
       "models": [
+        "qwen3.5-plus-20260420",
         "qwen3-max-2026-01-23",
+        "qwen-plus-2025-09-11",
+        "qwen-plus-2025-07-28",
+        "qwen-flash-2025-07-28",
         "qwen3-coder-flash-2025-07-28",
+        "qwen-plus-2025-07-28:thinking",
         "qwen3-coder-plus-2025-07-22",
+        "qwen-plus-2025-07-14",
         "qwen3-235b-a22b-2507",
         "qwen3-235b-a22b-thinking-2507",
+        "qwen3-30b-a3b-instruct-2507",
+        "qwen3-30b-a3b-thinking-2507",
+        "qwen-plus-2025-04-28",
+        "qwen-turbo-2025-04-28",
+        "qwen-plus-2025-01-25",
+        "qwen-turbo-2024-11-01",
         "qwen3-235b-a22b",
         "qwen3-vl-235b-a22b-instruct",
         "qwen3-vl-235b-a22b-thinking",
@@ -27,8 +39,6 @@
         "qwen3-32b",
         "qwen3-vl-32b-instruct",
         "qwen3-vl-32b-thinking",
-        "qwen3-30b-a3b-instruct-2507",
-        "qwen3-30b-a3b-thinking-2507",
         "qwen3-30b-a3b",
         "qwen3-vl-30b-a3b-instruct",
         "qwen3-vl-30b-a3b-thinking",
@@ -37,12 +47,12 @@
         "qwen3-8b",
         "qwen3-vl-8b-instruct",
         "qwen3-vl-8b-thinking",
+        "qwen3.7-max",
         "qwen3.6-35b-a3b",
         "qwen3.6-27b",
         "qwen3.6-plus",
         "qwen3.6-flash",
-        "qwen3.6-max-preview",
-        "qwen3.5-plus-20260420"
+        "qwen3.5-397b-a17b"
       ]
     },
     {
@@ -51,10 +61,10 @@
       "color": "#ff9900",
       "models": [
         "nova-2-lite-v1",
+        "nova-pro-v1",
         "nova-lite-v1",
         "nova-micro-v1",
-        "nova-premier-v1",
-        "nova-pro-v1"
+        "nova-premier-v1"
       ]
     },
     {
@@ -62,17 +72,56 @@
       "name": "Anthropic",
       "color": "#d97757",
       "models": [
-        "claude-3-haiku",
-        "claude-3.5-haiku",
-        "claude-haiku-4.5",
-        "claude-opus-4",
-        "claude-opus-4.1",
-        "claude-opus-4.5",
-        "claude-opus-4.6",
         "claude-opus-4.7",
-        "claude-sonnet-4",
+        "claude-opus-4.6",
+        "claude-sonnet-4.6",
+        "claude-opus-4.5",
+        "claude-haiku-4.5",
         "claude-sonnet-4.5",
-        "claude-sonnet-4.6"
+        "claude-opus-4.1",
+        "claude-opus-4",
+        "claude-sonnet-4",
+        "claude-3.5-haiku",
+        "claude-3-haiku"
+      ]
+    },
+    {
+      "id": "baidu",
+      "name": "Baidu (ERNIE)",
+      "color": "#2932e1",
+      "models": [
+        "ernie-x1-turbo-32k",
+        "ernie-4.5-300b-a47b",
+        "ernie-4.5-21b-a3b",
+        "ernie-4.5-21b-a3b-thinking",
+        "ernie-4.5-turbo-8k",
+        "ernie-4.5-turbo-vl",
+        "ernie-4.5-turbo-32k",
+        "ernie-4.5-turbo-128k",
+        "ernie-4.5-vl-28b-a3b",
+        "ernie-4.5-vl-424b-a47b",
+        "ernie-4.0-turbo-8k",
+        "ernie-3.5-8k"
+      ]
+    },
+    {
+      "id": "bytedance",
+      "name": "ByteDance (Doubao)",
+      "color": "#3252a8",
+      "models": [
+        "doubao-seed-2-0-pro-260215",
+        "doubao-seed-2-0-lite-260215",
+        "doubao-seed-2-0-mini-260215",
+        "doubao-seed-2-0-code-preview-260215"
+      ]
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "color": "#f97316",
+      "models": [
+        "qwen-3-32b",
+        "llama-3.3-70b"
       ]
     },
     {
@@ -80,10 +129,10 @@
       "name": "Cohere",
       "color": "#6936f5",
       "models": [
-        "command-a",
         "command-r-08-2024",
         "command-r-plus-08-2024",
-        "command-r7b-12-2024"
+        "command-r7b-12-2024",
+        "command-a"
       ]
     },
     {
@@ -91,23 +140,34 @@
       "name": "DeepSeek",
       "color": "#4d6bfe",
       "models": [
-        "deepseek-chat",
-        "deepseek-chat-v3-0324",
-        "deepseek-chat-v3.1",
-        "deepseek-coder",
-        "deepseek-r1",
-        "deepseek-r1-0528",
-        "deepseek-r1-distill-llama-70b",
-        "deepseek-r1-distill-qwen-32b",
-        "deepseek-reasoner",
-        "deepseek-v3",
-        "deepseek-v3.1-terminus",
+        "deepseek-v4-pro",
+        "deepseek-v4-flash",
         "deepseek-v3.2",
+        "deepseek-r1-0528",
+        "deepseek-chat-v3-0324",
+        "deepseek-r1",
+        "deepseek-v4-flash:free",
         "deepseek-v3.2-exp",
         "deepseek-v3.2-speciale",
-        "deepseek-v4-flash",
-        "deepseek-v4-flash:free",
-        "deepseek-v4-pro"
+        "deepseek-chat-v3.1",
+        "deepseek-v3.1-terminus",
+        "deepseek-v3",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-chat",
+        "deepseek-coder",
+        "deepseek-reasoner"
+      ]
+    },
+    {
+      "id": "fireworks",
+      "name": "Fireworks AI",
+      "color": "#f97316",
+      "models": [
+        "glm-5p1",
+        "glm-4p7",
+        "kimi-k2p5",
+        "minimax-m2p1"
       ]
     },
     {
@@ -123,9 +183,29 @@
         "gemma-4-26b-a4b-it:free",
         "gemma-3-27b-it",
         "gemma-3-12b-it",
+        "gemini-3.5-flash",
         "gemma-3-4b-it",
-        "gemma-3n-e4b-it",
         "gemini-3.1-flash-lite",
+        "gemma-3n-e4b-it",
+        "gemma-2-27b-it",
+        "gemini-gemma-2-27b-it",
+        "gemini-gemma-2-9b-it",
+        "gemini-2.5-flash-native-audio-latest",
+        "gemini-2.5-pro",
+        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
+        "gemini-2.5-flash-image",
+        "gemini-2.0-flash",
+        "gemini-embedding-2",
+        "gemini-2.0-flash-001",
+        "gemini-2.0-flash-lite",
+        "gemini-2.0-flash-lite-001",
+        "gemini-2.0-flash-exp-image-generation",
+        "gemini-1.5-flash",
+        "gemini-embedding-001",
+        "gemini-pro-latest",
+        "gemini-flash-latest",
+        "gemini-flash-lite-latest",
         "gemini-3.1-pro-preview",
         "gemini-3.1-flash-lite-preview",
         "gemini-3.1-flash-live-preview",
@@ -134,17 +214,41 @@
         "gemini-3-pro-preview",
         "gemini-3-flash-preview",
         "gemini-3-pro-image-preview",
-        "gemma-2-27b-it",
-        "gemini-gemma-2-27b-it",
-        "gemini-gemma-2-9b-it",
-        "gemini-2.5-flash-native-audio-preview-12-2025",
-        "gemini-2.5-computer-use-preview-10-2025",
-        "gemini-2.5-flash-preview-09-2025",
-        "gemini-2.5-flash-lite-preview-09-2025",
-        "gemini-2.5-flash-native-audio-preview-09-2025",
-        "gemini-live-2.5-flash-preview-native-audio-09-2025",
-        "gemini-2.5-flash-lite-preview-06-17",
-        "gemini-2.5-pro-preview-05-06"
+        "gemini-2.5-pro-preview"
+      ]
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "color": "#f55036",
+      "models": [
+        "qwen/qwen3-32b",
+        "gemma-7b-it",
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant"
+      ]
+    },
+    {
+      "id": "huawei",
+      "name": "Huawei (Pangu)",
+      "color": "#cf0a2c",
+      "models": [
+        "pangu-lite",
+        "pangu-pro-moe",
+        "pangu-ultra-moe"
+      ]
+    },
+    {
+      "id": "iflytek",
+      "name": "iFlytek (Spark)",
+      "color": "#e1251b",
+      "models": [
+        "spark-pro-128k",
+        "spark-max-32k",
+        "spark-x1",
+        "spark-max",
+        "spark-pro",
+        "spark-lite"
       ]
     },
     {
@@ -152,20 +256,20 @@
       "name": "Meta",
       "color": "#0668e1",
       "models": [
+        "llama-guard-4-12b",
+        "llama-4-scout",
+        "llama-4-maverick",
         "llama-3-70b-instruct",
+        "llama-guard-3-8b",
         "llama-3-8b-instruct",
-        "llama-3.1-70b-instruct",
-        "llama-3.1-8b-instruct",
-        "llama-3.2-11b-vision-instruct",
-        "llama-3.2-1b-instruct",
-        "llama-3.2-3b-instruct",
-        "llama-3.2-3b-instruct:free",
         "llama-3.3-70b-instruct",
         "llama-3.3-70b-instruct:free",
-        "llama-4-maverick",
-        "llama-4-scout",
-        "llama-guard-3-8b",
-        "llama-guard-4-12b"
+        "llama-3.2-11b-vision-instruct",
+        "llama-3.2-3b-instruct",
+        "llama-3.2-3b-instruct:free",
+        "llama-3.2-1b-instruct",
+        "llama-3.1-70b-instruct",
+        "llama-3.1-8b-instruct"
       ]
     },
     {
@@ -173,19 +277,19 @@
       "name": "Minimax",
       "color": "#e1b0dd",
       "models": [
-        "MiniMax-M2",
-        "MiniMax-M2.1",
-        "MiniMax-M2.1-lightning",
+        "minimax-m2.7",
+        "minimax-m2.5",
         "MiniMax-M2.5",
+        "minimax-m2.5:free",
         "MiniMax-M2.5-lightning",
+        "minimax-m2",
+        "MiniMax-M2",
+        "minimax-m2-her",
         "minimax-01",
         "minimax-m1",
-        "minimax-m2",
-        "minimax-m2-her",
+        "MiniMax-M2.1",
         "minimax-m2.1",
-        "minimax-m2.5",
-        "minimax-m2.5:free",
-        "minimax-m2.7"
+        "MiniMax-M2.1-lightning"
       ]
     },
     {
@@ -193,36 +297,46 @@
       "name": "Mistral",
       "color": "#f90",
       "models": [
-        "mistral-small-24b-instruct-2501",
-        "ministral-14b-2512",
-        "pixtral-12b-2409",
-        "ministral-8b-2512",
-        "mistral-7b-instruct-v0.1",
-        "ministral-3b-2512",
-        "ministral-3-14b-2512",
-        "ministral-3-8b-2512",
-        "mistral-medium-3-5",
-        "ministral-3-3b-2512",
-        "mistral-small-3-2-2506",
-        "mistral-small-3.2-24b-instruct",
-        "mistral-medium-3-1-2508",
-        "mistral-small-3.1-24b-instruct",
-        "mistral-medium-3.1",
-        "mistral-large-3",
-        "mistral-medium-3",
         "mistral-small-2603",
         "mistral-large-2512",
+        "ministral-14b-2512",
+        "ministral-8b-2512",
+        "ministral-3-14b-2512",
+        "ministral-3-8b-2512",
+        "ministral-3-3b-2512",
+        "ministral-3b-2512",
         "codestral-2508",
+        "mistral-medium-3-1-2508",
+        "mistral-small-3-2-2506",
         "mistral-medium-2505",
         "codestral-embed-2505",
         "mistral-ocr-2505-completion",
+        "mistral-small-24b-instruct-2501",
         "mistral-large-2411",
         "pixtral-large-2411",
+        "pixtral-12b-2409",
         "mistral-large-2407",
         "codestral-2405",
         "mistral-large-2402",
         "mistral-medium-2312",
-        "mistral-nemo"
+        "mistral-7b-instruct-v0.1",
+        "mistral-medium-3-5",
+        "mistral-small-3.2-24b-instruct",
+        "mistral-small-3.1-24b-instruct",
+        "mistral-medium-3.1",
+        "mistral-large-3",
+        "mistral-medium-3",
+        "codestral-latest",
+        "mistral-ocr-latest",
+        "mistral-large-latest",
+        "mistral-small-latest",
+        "pixtral-large-latest",
+        "mistral-medium-latest",
+        "codestral-mamba-latest",
+        "mistral-nemo",
+        "mistral-saba",
+        "mistral-tiny",
+        "mistral-embed"
       ]
     },
     {
@@ -230,30 +344,30 @@
       "name": "Moonshot (Kimi)",
       "color": "#8b5cf6",
       "models": [
-        "kimi-k2",
-        "kimi-k2-0711-preview",
         "kimi-k2-0905",
-        "kimi-k2-0905-preview",
-        "kimi-k2-thinking",
-        "kimi-k2-thinking-turbo",
-        "kimi-k2-turbo-preview",
-        "kimi-k2.5",
-        "kimi-k2.6",
-        "kimi-latest",
         "kimi-latest-128k",
         "kimi-latest-32k",
         "kimi-latest-8k",
-        "kimi-thinking-preview",
+        "kimi-k2.6",
+        "kimi-k2.5",
+        "kimi-k2",
+        "kimi-k2-thinking",
+        "kimi-k2-thinking-turbo",
         "moonshot-v1-128k",
         "moonshot-v1-128k-0430",
-        "moonshot-v1-128k-vision-preview",
         "moonshot-v1-32k",
         "moonshot-v1-32k-0430",
-        "moonshot-v1-32k-vision-preview",
         "moonshot-v1-8k",
         "moonshot-v1-8k-0430",
+        "moonshot-v1-auto",
+        "kimi-latest",
+        "kimi-k2-0905-preview",
+        "kimi-k2-0711-preview",
+        "kimi-k2-turbo-preview",
+        "moonshot-v1-128k-vision-preview",
+        "moonshot-v1-32k-vision-preview",
         "moonshot-v1-8k-vision-preview",
-        "moonshot-v1-auto"
+        "kimi-thinking-preview"
       ]
     },
     {
@@ -261,14 +375,14 @@
       "name": "Nvidia",
       "color": "#540df7",
       "models": [
-        "llama-3.3-nemotron-super-49b-v1.5",
-        "nemotron-3-nano-30b-a3b",
-        "nemotron-3-nano-30b-a3b:free",
-        "nemotron-3-super-120b-a12b",
-        "nemotron-3-super-120b-a12b:free",
         "nemotron-nano-12b-v2-vl:free",
         "nemotron-nano-9b-v2",
-        "nemotron-nano-9b-v2:free"
+        "nemotron-nano-9b-v2:free",
+        "llama-3.3-nemotron-super-49b-v1.5",
+        "nemotron-3-nano-30b-a3b",
+        "nemotron-3-super-120b-a12b",
+        "nemotron-3-nano-30b-a3b:free",
+        "nemotron-3-super-120b-a12b:free"
       ]
     },
     {
@@ -277,24 +391,34 @@
       "color": "#10a37f",
       "models": [
         "gpt-5.5",
-        "gpt-5.5-pro",
-        "gpt-5.4-image-2",
         "gpt-5.4",
+        "gpt-5.2",
+        "gpt-5.1",
+        "gpt-5",
+        "o4-mini",
+        "o3",
+        "gpt-4.1",
+        "o3-mini",
+        "o1",
+        "gpt-4o-2024-11-20",
+        "gpt-4o-2024-08-06",
+        "gpt-4o-mini-2024-07-18",
+        "gpt-4o",
+        "gpt-4o-2024-05-13",
+        "gpt-5.5-pro",
         "gpt-5.4-pro",
         "gpt-5.4-mini",
         "gpt-5.4-nano",
+        "gpt-5.4-image-2",
         "gpt-5.3-chat",
         "gpt-5.3-codex",
-        "gpt-5.2",
         "gpt-5.2-pro",
         "gpt-5.2-chat",
         "gpt-5.2-codex",
-        "gpt-5.1",
         "gpt-5.1-chat",
         "gpt-5.1-codex",
         "gpt-5.1-codex-max",
         "gpt-5.1-codex-mini",
-        "gpt-5",
         "gpt-5-pro",
         "gpt-5-chat",
         "gpt-5-mini",
@@ -302,10 +426,10 @@
         "gpt-5-codex",
         "gpt-5-image",
         "gpt-5-image-mini",
-        "gpt-4o-2024-11-20",
-        "gpt-4o-2024-08-06",
-        "gpt-4o-mini-2024-07-18",
-        "gpt-4o-2024-05-13"
+        "gpt-4-0314",
+        "gpt-4.1-mini",
+        "gpt-4.1-nano",
+        "gpt-4"
       ]
     },
     {
@@ -313,24 +437,35 @@
       "name": "Perplexity",
       "color": "#1abc9c",
       "models": [
-        "llama-2-70b-chat",
-        "llama-3.1-70b-instruct",
-        "llama-3.1-8b-instruct",
-        "mistral-7b-instruct",
         "pplx-70b-chat",
         "pplx-70b-online",
         "pplx-7b-chat",
         "pplx-7b-online",
-        "pplx-embed-v1-0.6b",
+        "mistral-7b-instruct",
+        "llama-3.1-70b-instruct",
+        "llama-3.1-8b-instruct",
+        "llama-2-70b-chat",
         "pplx-embed-v1-4b",
+        "pplx-embed-v1-0.6b",
         "sonar",
-        "sonar-deep-research",
-        "sonar-medium-chat",
-        "sonar-medium-online",
         "sonar-pro",
         "sonar-pro-search",
         "sonar-small-chat",
-        "sonar-small-online"
+        "sonar-medium-chat",
+        "sonar-small-online",
+        "sonar-deep-research",
+        "sonar-medium-online"
+      ]
+    },
+    {
+      "id": "sensetime",
+      "name": "SenseTime",
+      "color": "#7c3aed",
+      "models": [
+        "SenseNova-V6-5",
+        "SenseNova-V6-Pro",
+        "SenseNova-V6-Reasoner",
+        "SenseNova-V5-5"
       ]
     },
     {
@@ -351,32 +486,83 @@
       ]
     },
     {
+      "id": "tencent",
+      "name": "Tencent (Hunyuan)",
+      "color": "#0052d9",
+      "models": [
+        "hunyuan-a13b-instruct",
+        "hunyuan-turbo-latest",
+        "hunyuan-turbos-latest",
+        "hunyuan-lite",
+        "hunyuan-large",
+        "hunyuan-standard"
+      ]
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "color": "#111827",
+      "models": [
+        "Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "Qwen/Qwen3-235B-A22B-fp8-tput",
+        "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "Qwen/Qwen3-Next-80B-A3B-Thinking",
+        "Qwen/Qwen3.5-397B-A17B",
+        "Qwen/Qwen2.5-72B-Instruct-Turbo",
+        "Qwen/Qwen2.5-7B-Instruct-Turbo",
+        "deepseek-ai/DeepSeek-V3.1",
+        "deepseek-ai/DeepSeek-V3",
+        "deepseek-ai/DeepSeek-R1-0528-tput",
+        "deepseek-ai/DeepSeek-R1"
+      ]
+    },
+    {
       "id": "xai",
       "name": "xAI",
       "color": "#1da1f2",
       "models": [
-        "grok-2",
         "grok-2-1212",
-        "grok-2-latest",
-        "grok-2-vision",
         "grok-2-vision-1212",
-        "grok-2-vision-latest",
-        "grok-3",
-        "grok-3-beta",
-        "grok-3-latest",
-        "grok-3-mini",
-        "grok-3-mini-beta",
-        "grok-3-mini-latest",
-        "grok-4",
         "grok-4-0709",
-        "grok-4-latest",
+        "grok-4.20-multi-agent-beta-0309",
         "grok-4.20",
         "grok-4.20-multi-agent",
-        "grok-4.20-multi-agent-beta-0309",
-        "grok-4.3",
         "grok-4.3-latest",
+        "grok-4.3",
+        "grok-4-latest",
+        "grok-4",
+        "grok-3-latest",
+        "grok-3-mini-latest",
+        "grok-3",
+        "grok-3-beta",
+        "grok-3-mini",
+        "grok-3-mini-beta",
+        "grok-2-latest",
+        "grok-2-vision-latest",
+        "grok-2",
+        "grok-2-vision",
+        "grok-build-0.1",
         "grok-beta",
         "grok-vision-beta"
+      ]
+    },
+    {
+      "id": "xiaomi",
+      "name": "Xiaomi",
+      "color": "#ff6900",
+      "models": [
+        "MiMo-VL-7B-RL",
+        "MiMo-7B-RL",
+        "MiMo-7B-SFT",
+        "MiMo-7B-Base",
+        "MiMo-7B-RL-Zero",
+        "mimo-v2.5",
+        "mimo-v2.5-pro",
+        "mimo-v2-pro",
+        "mimo-v2-omni",
+        "mimo-v2-flash"
       ]
     },
     {
@@ -384,20 +570,20 @@
       "name": "Zhipu (GLM)",
       "color": "#3859ff",
       "models": [
+        "glm-5",
+        "glm-5-code",
         "glm-4-32b-0414-128k",
+        "glm-4.7",
+        "glm-4.6",
         "glm-4.5",
+        "glm-4.5v",
+        "glm-4.5-x",
         "glm-4.5-air",
         "glm-4.5-airx",
-        "glm-4.5-flash",
-        "glm-4.5-x",
-        "glm-4.5v",
-        "glm-4.6",
-        "glm-4.7",
-        "glm-5",
-        "glm-5-code"
+        "glm-4.5-flash"
       ]
     }
   ],
-  "updated_at": "2026-05-15T15:13:22Z",
-  "source": "openrouter+lite-llm"
+  "updated_at": "2026-05-23T10:11:14Z",
+  "source": "openrouter+lite-llm+supplemental"
 }
