@@ -1,0 +1,2910 @@
+{
+  "providers": [
+    {
+      "id": "ai21",
+      "name": "AI21 Labs",
+      "color": "#14b8a6",
+      "models": [
+        {
+          "name": "jamba-large-1.7",
+          "pricing": {
+            "input": 2.0,
+            "output": 8.0
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "alibaba",
+      "name": "Alibaba (Qwen)",
+      "color": "#ff6a00",
+      "models": [
+        {
+          "name": "qwen3.5-plus-20260420",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.8
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen-plus-2025-07-28",
+          "pricing": {
+            "input": 0.26,
+            "output": 0.78
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen-plus-2025-07-28:thinking",
+          "pricing": {
+            "input": 0.26,
+            "output": 0.78
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen-plus-2025-07-14",
+          "pricing": {
+            "input": 0.4,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen3-235b-a22b-2507",
+          "pricing": {
+            "input": 0.071,
+            "output": 0.1
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-235b-a22b-thinking-2507",
+          "pricing": {
+            "input": 0.1495,
+            "output": 1.495
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-30b-a3b-instruct-2507",
+          "pricing": {
+            "input": 0.09,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-30b-a3b-thinking-2507",
+          "pricing": {
+            "input": 0.08,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen-plus-2025-04-28",
+          "pricing": {
+            "input": 0.4,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen-turbo-2025-04-28",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen-plus-2025-01-25",
+          "pricing": {
+            "input": 0.4,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen-turbo-2024-11-01",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen3-235b-a22b",
+          "pricing": {
+            "input": 0.455,
+            "output": 1.82
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-235b-a22b-instruct",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.88
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-235b-a22b-thinking",
+          "pricing": {
+            "input": 0.26,
+            "output": 2.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-next-80b-a3b-instruct",
+          "pricing": {
+            "input": 0.09,
+            "output": 1.1
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-next-80b-a3b-thinking",
+          "pricing": {
+            "input": 0.0975,
+            "output": 0.78
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-next-80b-a3b-instruct:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-32b",
+          "pricing": {
+            "input": 0.08,
+            "output": 0.28
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-32b-instruct",
+          "pricing": {
+            "input": 0.104,
+            "output": 0.416
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-32b-thinking",
+          "pricing": {
+            "input": 0.16,
+            "output": 2.87
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen3-30b-a3b",
+          "pricing": {
+            "input": 0.09,
+            "output": 0.45
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-30b-a3b-instruct",
+          "pricing": {
+            "input": 0.13,
+            "output": 0.52
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-30b-a3b-thinking",
+          "pricing": {
+            "input": 0.13,
+            "output": 1.56
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-coder-30b-a3b-instruct",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.27
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-14b",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.24
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-8b",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-8b-instruct",
+          "pricing": {
+            "input": 0.08,
+            "output": 0.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3-vl-8b-thinking",
+          "pricing": {
+            "input": 0.117,
+            "output": 1.365
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.7-max",
+          "pricing": {
+            "input": 1.25,
+            "output": 3.75
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.6-35b-a3b",
+          "pricing": {
+            "input": 0.14,
+            "output": 1.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.6-27b",
+          "pricing": {
+            "input": 0.29,
+            "output": 3.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.6-plus",
+          "pricing": {
+            "input": 0.325,
+            "output": 1.95
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.6-flash",
+          "pricing": {
+            "input": 0.1875,
+            "output": 1.125
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-397b-a17b",
+          "pricing": {
+            "input": 0.39,
+            "output": 2.34
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-122b-a10b",
+          "pricing": {
+            "input": 0.26,
+            "output": 2.08
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-35b-a3b",
+          "pricing": {
+            "input": 0.139,
+            "output": 1.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-27b",
+          "pricing": {
+            "input": 0.195,
+            "output": 1.56
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-9b",
+          "pricing": {
+            "input": 0.04,
+            "output": 0.15
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "qwen3.5-plus-02-15",
+          "pricing": {
+            "input": 0.26,
+            "output": 1.56
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "color": "#ff9900",
+      "models": [
+        {
+          "name": "nova-2-lite-v1",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nova-pro-v1",
+          "pricing": {
+            "input": 0.8,
+            "output": 3.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nova-lite-v1",
+          "pricing": {
+            "input": 0.06,
+            "output": 0.24
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nova-micro-v1",
+          "pricing": {
+            "input": 0.035,
+            "output": 0.14
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nova-premier-v1",
+          "pricing": {
+            "input": 2.5,
+            "output": 12.5
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "color": "#d97757",
+      "models": [
+        {
+          "name": "claude-opus-4.7",
+          "pricing": {
+            "input": 5.0,
+            "output": 25.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-opus-4.6",
+          "pricing": {
+            "input": 5.0,
+            "output": 25.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-sonnet-4.6",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-opus-4.5",
+          "pricing": {
+            "input": 5.0,
+            "output": 25.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-haiku-4.5",
+          "pricing": {
+            "input": 1.0,
+            "output": 5.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-sonnet-4.5",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-opus-4.1",
+          "pricing": {
+            "input": 15.0,
+            "output": 75.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-opus-4",
+          "pricing": {
+            "input": 15.0,
+            "output": 75.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-sonnet-4",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-3.5-haiku",
+          "pricing": {
+            "input": 0.8,
+            "output": 4.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "claude-3-haiku",
+          "pricing": {
+            "input": 0.25,
+            "output": 1.25
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "baidu",
+      "name": "Baidu (ERNIE)",
+      "color": "#2932e1",
+      "models": [
+        {
+          "name": "ernie-4.5-300b-a47b",
+          "pricing": {
+            "input": 0.28,
+            "output": 1.1
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ernie-4.5-21b-a3b",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.28
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ernie-4.5-21b-a3b-thinking",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.28
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ernie-4.5-vl-28b-a3b",
+          "pricing": {
+            "input": 0.14,
+            "output": 0.56
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ernie-4.5-vl-424b-a47b",
+          "pricing": {
+            "input": 0.42,
+            "output": 1.25
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "color": "#f97316",
+      "models": [
+        {
+          "name": "gpt-oss-120b",
+          "pricing": {
+            "input": 0.35,
+            "output": 0.75
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "qwen-3-32b",
+          "pricing": {
+            "input": 0.4,
+            "output": 0.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-3.3-70b",
+          "pricing": {
+            "input": 0.85,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "color": "#6936f5",
+      "models": [
+        {
+          "name": "command-r-08-2024",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "command-r-plus-08-2024",
+          "pricing": {
+            "input": 2.5,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "command-r7b-12-2024",
+          "pricing": {
+            "input": 0.0375,
+            "output": 0.15
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "command-a",
+          "pricing": {
+            "input": 2.5,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "color": "#4d6bfe",
+      "models": [
+        {
+          "name": "deepseek-v4-pro",
+          "pricing": {
+            "input": 0.435,
+            "output": 0.87
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v3.2",
+          "pricing": {
+            "input": 0.252,
+            "output": 0.378
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-r1-0528",
+          "pricing": {
+            "input": 0.5,
+            "output": 2.15
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-chat-v3-0324",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.77
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-r1",
+          "pricing": {
+            "input": 0.7,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v4-flash:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v3.2-exp",
+          "pricing": {
+            "input": 0.27,
+            "output": 0.41
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v3.2-speciale",
+          "pricing": {
+            "input": 0.287,
+            "output": 0.431
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-chat-v3.1",
+          "pricing": {
+            "input": 0.21,
+            "output": 0.79
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v3.1-terminus",
+          "pricing": {
+            "input": 0.27,
+            "output": 0.95
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-v3",
+          "pricing": {
+            "input": 0.27,
+            "output": 1.1
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-r1-distill-qwen-32b",
+          "pricing": {
+            "input": 0.29,
+            "output": 0.29
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-r1-distill-llama-70b",
+          "pricing": {
+            "input": 0.7,
+            "output": 0.8
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-chat",
+          "pricing": {
+            "input": 0.2288,
+            "output": 0.9144
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "deepseek-coder",
+          "pricing": {
+            "input": 0.14,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-reasoner",
+          "pricing": {
+            "input": 0.28,
+            "output": 0.42
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "fireworks",
+      "name": "Fireworks AI",
+      "color": "#f97316",
+      "models": [
+        {
+          "name": "glm-5p1",
+          "pricing": {
+            "input": 1.4,
+            "output": 4.4
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4p7",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-k2p5",
+          "pricing": {
+            "input": 0.6,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "minimax-m2p1",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "color": "#4285f4",
+      "models": [
+        {
+          "name": "gemini-exp-1206",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-exp-1114",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemma-4-31b-it",
+          "pricing": {
+            "input": 0.12,
+            "output": 0.37
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-4-31b-it:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-4-26b-a4b-it",
+          "pricing": {
+            "input": 0.06,
+            "output": 0.33
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-4-26b-a4b-it:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-3-27b-it",
+          "pricing": {
+            "input": 0.08,
+            "output": 0.16
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-3-12b-it",
+          "pricing": {
+            "input": 0.04,
+            "output": 0.13
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3.5-flash",
+          "pricing": {
+            "input": 1.5,
+            "output": 9.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-3-4b-it",
+          "pricing": {
+            "input": 0.04,
+            "output": 0.08
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3.1-flash-lite",
+          "pricing": {
+            "input": 0.25,
+            "output": 1.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-3n-e4b-it",
+          "pricing": {
+            "input": 0.06,
+            "output": 0.12
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemma-2-27b-it",
+          "pricing": {
+            "input": 0.65,
+            "output": 0.65
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-gemma-2-27b-it",
+          "pricing": {
+            "input": 0.35,
+            "output": 1.05
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-gemma-2-9b-it",
+          "pricing": {
+            "input": 0.35,
+            "output": 1.05
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-2.5-flash-native-audio-latest",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-2.5-pro",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.5-flash",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.5-flash-lite",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.5-flash-image",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.0-flash",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-embedding-2",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-2.0-flash-001",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.0-flash-lite",
+          "pricing": {
+            "input": 0.075,
+            "output": 0.3
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-2.0-flash-lite-001",
+          "pricing": {
+            "input": 0.075,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.0-flash-exp-image-generation",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-1.5-flash",
+          "pricing": {
+            "input": 0.075,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-embedding-001",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-pro-latest",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-flash-latest",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-flash-lite-latest",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-3.1-pro-preview",
+          "pricing": {
+            "input": 2.0,
+            "output": 12.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3.1-flash-lite-preview",
+          "pricing": {
+            "input": 0.25,
+            "output": 1.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3.1-flash-live-preview",
+          "pricing": {
+            "input": 0.75,
+            "output": 4.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-3.1-flash-image-preview",
+          "pricing": {
+            "input": 0.5,
+            "output": 3.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3.1-pro-preview-customtools",
+          "pricing": {
+            "input": 2.0,
+            "output": 12.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3-pro-preview",
+          "pricing": {
+            "input": 2.0,
+            "output": 12.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemini-3-flash-preview",
+          "pricing": {
+            "input": 0.5,
+            "output": 3.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-3-pro-image-preview",
+          "pricing": {
+            "input": 2.0,
+            "output": 12.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gemini-2.5-pro-preview",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "color": "#f55036",
+      "models": [
+        {
+          "name": "qwen/qwen3-32b",
+          "pricing": {
+            "input": 0.29,
+            "output": 0.59
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "gemma-7b-it",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.08
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-3.3-70b-versatile",
+          "pricing": {
+            "input": 0.59,
+            "output": 0.79
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-3.1-8b-instant",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.08
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "color": "#0668e1",
+      "models": [
+        {
+          "name": "llama-guard-4-12b",
+          "pricing": {
+            "input": 0.18,
+            "output": 0.18
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-4-scout",
+          "pricing": {
+            "input": 0.08,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-4-maverick",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3-70b-instruct",
+          "pricing": {
+            "input": 0.51,
+            "output": 0.74
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-guard-3-8b",
+          "pricing": {
+            "input": 0.484,
+            "output": 0.03
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3-8b-instruct",
+          "pricing": {
+            "input": 0.04,
+            "output": 0.04
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.3-70b-instruct",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.32
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.3-70b-instruct:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.2-11b-vision-instruct",
+          "pricing": {
+            "input": 0.245,
+            "output": 0.245
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.2-3b-instruct",
+          "pricing": {
+            "input": 0.0509,
+            "output": 0.335
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.2-3b-instruct:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.2-1b-instruct",
+          "pricing": {
+            "input": 0.027,
+            "output": 0.201
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.1-70b-instruct",
+          "pricing": {
+            "input": 0.4,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.1-8b-instruct",
+          "pricing": {
+            "input": 0.02,
+            "output": 0.05
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "minimax",
+      "name": "Minimax",
+      "color": "#e1b0dd",
+      "models": [
+        {
+          "name": "minimax-m2.7",
+          "pricing": {
+            "input": 0.279,
+            "output": 1.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "minimax-m2.5",
+          "pricing": {
+            "input": 0.15,
+            "output": 1.15
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "MiniMax-M2.5",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "minimax-m2.5:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "MiniMax-M2.5-lightning",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.4
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "minimax-m2",
+          "pricing": {
+            "input": 0.255,
+            "output": 1.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "MiniMax-M2",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "minimax-m2-her",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "minimax-01",
+          "pricing": {
+            "input": 0.2,
+            "output": 1.1
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "minimax-m1",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "minimax-m2.1",
+          "pricing": {
+            "input": 0.29,
+            "output": 0.95
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "MiniMax-M2.1",
+          "pricing": {
+            "input": 0.3,
+            "output": 1.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "MiniMax-M2.1-lightning",
+          "pricing": {
+            "input": 0.3,
+            "output": 2.4
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "color": "#f90",
+      "models": [
+        {
+          "name": "mistral-small-2603",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-large-2512",
+          "pricing": {
+            "input": 0.5,
+            "output": 1.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ministral-14b-2512",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ministral-8b-2512",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.15
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "ministral-3-14b-2512",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "ministral-3-8b-2512",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.15
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "ministral-3-3b-2512",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.1
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "ministral-3b-2512",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.1
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "codestral-2508",
+          "pricing": {
+            "input": 0.3,
+            "output": 0.9
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-medium-3-1-2508",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-small-3-2-2506",
+          "pricing": {
+            "input": 0.06,
+            "output": 0.18
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-medium-2505",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-small-24b-instruct-2501",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.08
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-large-2411",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "pixtral-large-2411",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "pixtral-12b-2409",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.15
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-large-2407",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "codestral-2405",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-large-2402",
+          "pricing": {
+            "input": 4.0,
+            "output": 12.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-medium-2312",
+          "pricing": {
+            "input": 2.7,
+            "output": 8.1
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-7b-instruct-v0.1",
+          "pricing": {
+            "input": 0.11,
+            "output": 0.19
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-medium-3-5",
+          "pricing": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-small-3.2-24b-instruct",
+          "pricing": {
+            "input": 0.075,
+            "output": 0.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-small-3.1-24b-instruct",
+          "pricing": {
+            "input": 0.351,
+            "output": 0.555
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-medium-3.1",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-large-3",
+          "pricing": {
+            "input": 0.5,
+            "output": 1.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-medium-3",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "codestral-latest",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-large-latest",
+          "pricing": {
+            "input": 0.5,
+            "output": 1.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-small-latest",
+          "pricing": {
+            "input": 0.06,
+            "output": 0.18
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pixtral-large-latest",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-medium-latest",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "codestral-mamba-latest",
+          "pricing": {
+            "input": 0.25,
+            "output": 0.25
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-nemo",
+          "pricing": {
+            "input": 0.02,
+            "output": 0.03
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-saba",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-tiny",
+          "pricing": {
+            "input": 0.25,
+            "output": 0.25
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-large",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mistral-small",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.3
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-medium",
+          "pricing": {
+            "input": 2.7,
+            "output": 8.1
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot (Kimi)",
+      "color": "#3d3d3d",
+      "models": [
+        {
+          "name": "kimi-k2-0905",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "kimi-latest-128k",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-latest-32k",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-latest-8k",
+          "pricing": {
+            "input": 0.2,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-k2.6",
+          "pricing": {
+            "input": 0.73,
+            "output": 3.49
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "kimi-k2.5",
+          "pricing": {
+            "input": 0.4,
+            "output": 1.9
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "kimi-k2",
+          "pricing": {
+            "input": 0.57,
+            "output": 2.3
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "kimi-k2-thinking",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "kimi-k2-thinking-turbo",
+          "pricing": {
+            "input": 1.15,
+            "output": 8.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-128k",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-128k-0430",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-32k",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-32k-0430",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-8k",
+          "pricing": {
+            "input": 0.2,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-8k-0430",
+          "pricing": {
+            "input": 0.2,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-auto",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-latest",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-k2-0905-preview",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-k2-0711-preview",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-k2-turbo-preview",
+          "pricing": {
+            "input": 1.15,
+            "output": 8.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-128k-vision-preview",
+          "pricing": {
+            "input": 2.0,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-32k-vision-preview",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "moonshot-v1-8k-vision-preview",
+          "pricing": {
+            "input": 0.2,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "kimi-thinking-preview",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "nvidia",
+      "name": "Nvidia",
+      "color": "#540df7",
+      "models": [
+        {
+          "name": "nemotron-nano-12b-v2-vl:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-nano-9b-v2",
+          "pricing": {
+            "input": 0.04,
+            "output": 0.16
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-nano-9b-v2:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "llama-3.3-nemotron-super-49b-v1.5",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-3-nano-30b-a3b",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.2
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-3-super-120b-a12b",
+          "pricing": {
+            "input": 0.09,
+            "output": 0.45
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-3-nano-30b-a3b:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "nemotron-3-super-120b-a12b:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "color": "#10a37f",
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "pricing": {
+            "input": 5.0,
+            "output": 30.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.4",
+          "pricing": {
+            "input": 2.5,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.2",
+          "pricing": {
+            "input": 1.75,
+            "output": 14.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.1",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "o4-mini",
+          "pricing": {
+            "input": 1.1,
+            "output": 4.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "o3",
+          "pricing": {
+            "input": 2.0,
+            "output": 8.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4.1",
+          "pricing": {
+            "input": 2.0,
+            "output": 8.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "o3-mini",
+          "pricing": {
+            "input": 1.1,
+            "output": 4.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "o1",
+          "pricing": {
+            "input": 15.0,
+            "output": 60.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4o-2024-11-20",
+          "pricing": {
+            "input": 2.5,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4o-2024-08-06",
+          "pricing": {
+            "input": 2.5,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4o-mini-2024-07-18",
+          "pricing": {
+            "input": 0.15,
+            "output": 0.6
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4o",
+          "pricing": {
+            "input": 2.5,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-4o-2024-05-13",
+          "pricing": {
+            "input": 5.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-oss-120b",
+          "pricing": {
+            "input": 0.039,
+            "output": 0.18
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-oss-120b:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-oss-20b",
+          "pricing": {
+            "input": 0.03,
+            "output": 0.14
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-oss-20b:free",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-oss-safeguard-20b",
+          "pricing": {
+            "input": 0.075,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.5-pro",
+          "pricing": {
+            "input": 30.0,
+            "output": 180.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.4-pro",
+          "pricing": {
+            "input": 30.0,
+            "output": 180.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "pricing": {
+            "input": 0.75,
+            "output": 4.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.4-nano",
+          "pricing": {
+            "input": 0.2,
+            "output": 1.25
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.4-image-2",
+          "pricing": {
+            "input": 8.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.3-chat",
+          "pricing": {
+            "input": 1.75,
+            "output": 14.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.3-codex",
+          "pricing": {
+            "input": 1.75,
+            "output": 14.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.2-pro",
+          "pricing": {
+            "input": 21.0,
+            "output": 168.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.2-chat",
+          "pricing": {
+            "input": 1.75,
+            "output": 14.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.2-codex",
+          "pricing": {
+            "input": 1.75,
+            "output": 14.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.1-chat",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.1-codex",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.1-codex-max",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5.1-codex-mini",
+          "pricing": {
+            "input": 0.25,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-pro",
+          "pricing": {
+            "input": 15.0,
+            "output": 120.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-chat",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-mini",
+          "pricing": {
+            "input": 0.25,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-nano",
+          "pricing": {
+            "input": 0.05,
+            "output": 0.4
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-codex",
+          "pricing": {
+            "input": 1.25,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "gpt-5-image",
+          "pricing": {
+            "input": 10.0,
+            "output": 10.0
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "color": "#1abc9c",
+      "models": [
+        {
+          "name": "pplx-70b-chat",
+          "pricing": {
+            "input": 0.7,
+            "output": 2.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pplx-70b-online",
+          "pricing": {
+            "input": 0.0,
+            "output": 2.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pplx-7b-chat",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pplx-7b-online",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "mistral-7b-instruct",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-3.1-70b-instruct",
+          "pricing": {
+            "input": 1.0,
+            "output": 1.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-3.1-8b-instruct",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "llama-2-70b-chat",
+          "pricing": {
+            "input": 0.7,
+            "output": 2.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pplx-embed-v1-4b",
+          "pricing": {
+            "input": 0.03,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "pplx-embed-v1-0.6b",
+          "pricing": {
+            "input": 0.004,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "sonar",
+          "pricing": {
+            "input": 1.0,
+            "output": 1.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "sonar-pro",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "sonar-pro-search",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "sonar-small-chat",
+          "pricing": {
+            "input": 0.07,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "sonar-medium-chat",
+          "pricing": {
+            "input": 0.6,
+            "output": 1.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "sonar-small-online",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.28
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "sonar-deep-research",
+          "pricing": {
+            "input": 2.0,
+            "output": 8.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "sonar-medium-online",
+          "pricing": {
+            "input": 0.0,
+            "output": 1.8
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "stepfun",
+      "name": "Stepfun",
+      "color": "#15a81f",
+      "models": [
+        {
+          "name": "step-3.5-flash",
+          "pricing": {
+            "input": 0.09,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent (Hunyuan)",
+      "color": "#0052d9",
+      "models": [
+        {
+          "name": "hunyuan-a13b-instruct",
+          "pricing": {
+            "input": 0.14,
+            "output": 0.57
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "color": "#111827",
+      "models": [
+        {
+          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "pricing": {
+            "input": 0.65,
+            "output": 3.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+          "pricing": {
+            "input": 0.2,
+            "output": 6.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+          "pricing": {
+            "input": 2.0,
+            "output": 2.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3-235B-A22B-fp8-tput",
+          "pricing": {
+            "input": 0.2,
+            "output": 0.6
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+          "pricing": {
+            "input": 0.15,
+            "output": 1.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+          "pricing": {
+            "input": 0.15,
+            "output": 1.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "Qwen/Qwen3.5-397B-A17B",
+          "pricing": {
+            "input": 0.6,
+            "output": 3.6
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-V3.1",
+          "pricing": {
+            "input": 0.6,
+            "output": 1.7
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-V3",
+          "pricing": {
+            "input": 1.25,
+            "output": 1.25
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-R1-0528-tput",
+          "pricing": {
+            "input": 0.55,
+            "output": 2.19
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-R1",
+          "pricing": {
+            "input": 3.0,
+            "output": 7.0
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "color": "#1da1f2",
+      "models": [
+        {
+          "name": "grok-2-1212",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-2-vision-1212",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-4-0709",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-4.20-multi-agent-beta-0309",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-4.20",
+          "pricing": {
+            "input": 1.25,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "grok-4.20-multi-agent",
+          "pricing": {
+            "input": 2.0,
+            "output": 6.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "grok-4.3-latest",
+          "pricing": {
+            "input": 1.25,
+            "output": 2.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-4.3",
+          "pricing": {
+            "input": 1.25,
+            "output": 2.5
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "grok-4-latest",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-4",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3-latest",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3-mini-latest",
+          "pricing": {
+            "input": 0.3,
+            "output": 0.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3-beta",
+          "pricing": {
+            "input": 3.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3-mini",
+          "pricing": {
+            "input": 0.3,
+            "output": 0.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-3-mini-beta",
+          "pricing": {
+            "input": 0.3,
+            "output": 0.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-2-latest",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-2-vision-latest",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-2",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-2-vision",
+          "pricing": {
+            "input": 2.0,
+            "output": 10.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-build-0.1",
+          "pricing": {
+            "input": 1.0,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "grok-beta",
+          "pricing": {
+            "input": 5.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "grok-vision-beta",
+          "pricing": {
+            "input": 5.0,
+            "output": 15.0
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    },
+    {
+      "id": "xiaomi",
+      "name": "Xiaomi",
+      "color": "#ff6900",
+      "models": [
+        {
+          "name": "mimo-v2.5",
+          "pricing": {
+            "input": 0.14,
+            "output": 0.28
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mimo-v2.5-pro",
+          "pricing": {
+            "input": 0.435,
+            "output": 0.87
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mimo-v2-pro",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mimo-v2-omni",
+          "pricing": {
+            "input": 0.4,
+            "output": 2.0
+          },
+          "pricing_source": "openrouter"
+        },
+        {
+          "name": "mimo-v2-flash",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.3
+          },
+          "pricing_source": "openrouter"
+        }
+      ]
+    },
+    {
+      "id": "zhipu",
+      "name": "Zhipu (GLM)",
+      "color": "#3859ff",
+      "models": [
+        {
+          "name": "glm-5",
+          "pricing": {
+            "input": 1.0,
+            "output": 3.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-5-code",
+          "pricing": {
+            "input": 1.2,
+            "output": 5.0
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4-32b-0414-128k",
+          "pricing": {
+            "input": 0.1,
+            "output": 0.1
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.7",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.6",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5",
+          "pricing": {
+            "input": 0.6,
+            "output": 2.2
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5v",
+          "pricing": {
+            "input": 0.6,
+            "output": 1.8
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5-x",
+          "pricing": {
+            "input": 2.2,
+            "output": 8.9
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5-air",
+          "pricing": {
+            "input": 0.2,
+            "output": 1.1
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5-airx",
+          "pricing": {
+            "input": 1.1,
+            "output": 4.5
+          },
+          "pricing_source": "litellm"
+        },
+        {
+          "name": "glm-4.5-flash",
+          "pricing": {
+            "input": 0.0,
+            "output": 0.0
+          },
+          "pricing_source": "litellm"
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-05-27T12:09:00Z",
+  "source": "openrouter+lite-llm+artificial-analysis"
+}
