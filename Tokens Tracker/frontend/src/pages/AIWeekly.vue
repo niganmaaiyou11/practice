@@ -1,7 +1,7 @@
 <template>
   <div class="weekly-shell">
     <aside class="weekly-index anim-fade-up">
-      <p class="index-label">AI Weekly</p>
+      <p class="index-label">{{ loc.t.weekly?.navLabel || 'AI Weekly' }}</p>
       <a
         v-for="category in categories"
         :key="category.key"
@@ -12,7 +12,7 @@
       </a>
       <div class="index-divider"></div>
       <button class="index-link index-action" @click="onRefresh" :disabled="refreshing">
-        {{ refreshing ? '刷新中...' : '手动刷新' }}
+        {{ refreshing ? (loc.t.weekly?.refreshing || '刷新中...') : (loc.t.weekly?.refresh || '手动刷新') }}
       </button>
     </aside>
 
@@ -20,9 +20,9 @@
       <section class="weekly-hero anim-fade-up">
         <div class="hero-top-row">
           <div>
-            <p class="eyebrow">AI Weekly · {{ issueLabel }}</p>
-            <h1>AI 周报</h1>
-            <p class="hero-subtitle">精选每周 AI 模型、工具、开源与国内动态，帮助你更快判断哪些变化值得关注。</p>
+            <p class="eyebrow">{{ loc.t.weekly?.navLabel || 'AI Weekly' }} · {{ issueLabel }}</p>
+            <h1>{{ loc.t.weekly?.pageTitle || 'AI 周报' }}</h1>
+            <p class="hero-subtitle">{{ loc.t.weekly?.heroSubtitle || '精选每周 AI 模型、工具、开源与国内动态，帮助你更快判断哪些变化值得关注。' }}</p>
           </div>
           <NotificationBell />
         </div>
@@ -31,8 +31,8 @@
       <!-- Feed Status Card -->
       <section v-if="feedStatus" class="status-card anim-fade-up" style="animation-delay: 40ms">
         <div class="section-head">
-          <span>数据源状态</span>
-          <span class="status-time">最后刷新：{{ formatRefreshTime(feedStatus.last_refresh_at) }}</span>
+          <span>{{ loc.t.weekly?.feedStatus || '数据源状态' }}</span>
+          <span class="status-time">{{ loc.t.weekly?.lastRefresh || '最后刷新：' }}{{ formatRefreshTime(feedStatus.last_refresh_at) }}</span>
         </div>
         <div class="source-grid">
           <div
@@ -43,20 +43,20 @@
           >
             <span class="source-dot"></span>
             <span class="source-name">{{ src.name }}</span>
-            <span v-if="src.ok" class="source-count">{{ src.items_count }} 条</span>
-            <span v-else class="source-error" :title="src.error">失败</span>
+            <span v-if="src.ok" class="source-count">{{ src.items_count }}{{ loc.t.weekly?.items || ' 条' }}</span>
+            <span v-else class="source-error" :title="src.error">{{ loc.t.weekly?.failed || '失败' }}</span>
           </div>
         </div>
         <p v-if="refreshResult" class="refresh-result">
-          刷新完成：新增 {{ refreshResult.new_items }} 条，
-          {{ refreshResult.sources_ok }}/{{ refreshResult.sources_ok + refreshResult.sources_failed }} 个源成功
+          {{ loc.t.weekly?.refreshDone || '刷新完成：新增 ' }}{{ refreshResult.new_items }}{{ loc.t.weekly?.refreshItems || ' 条，' }}
+          {{ refreshResult.sources_ok }}/{{ refreshResult.sources_ok + refreshResult.sources_failed }}{{ loc.t.weekly?.refreshSourcesOk || ' 个源成功' }}
         </p>
       </section>
 
       <section class="summary-card anim-fade-up" style="animation-delay: 80ms">
         <div class="section-head">
-          <span>本周摘要</span>
-          <router-link to="/leaderboard">查看模型榜单</router-link>
+          <span>{{ loc.t.weekly?.weeklySummary || '本周摘要' }}</span>
+          <router-link to="/leaderboard">{{ loc.t.weekly?.viewLeaderboard || '查看模型榜单' }}</router-link>
         </div>
         <ol class="highlight-list">
           <li v-for="item in weeklyHighlights" :key="item">{{ item }}</li>
@@ -90,7 +90,7 @@
               </div>
               <h3>{{ item.title }}</h3>
               <p>{{ item.summary }}</p>
-              <span class="read-link">阅读全文</span>
+              <span class="read-link">{{ loc.t.weekly?.readMore || '阅读全文' }}</span>
             </router-link>
           </div>
         </article>
@@ -106,6 +106,9 @@ import type { WeeklyStatusResponse } from '../api/weekly'
 import { weeklyHighlights as fallbackHighlights, weeklyItems as fallbackItems } from '../data/weekly'
 import type { WeeklyItem } from '../types'
 import NotificationBell from '../components/NotificationBell.vue'
+import { useLocaleStore } from '../stores/locale'
+
+const loc = useLocaleStore()
 
 const weeklyHighlights = ref<string[]>(fallbackHighlights)
 const weeklyItems = ref<WeeklyItem[]>(fallbackItems.map((item) => ({
@@ -165,30 +168,34 @@ async function onRefresh() {
 }
 
 function formatRefreshTime(value: string | null): string {
-  if (!value) return '未刷新'
+  const w = loc.t.weekly
+  if (!value) return w?.neverRefreshed || '未刷新'
   const date = new Date(value)
   const now = new Date()
   const diffMs = now.getTime() - date.getTime()
   const diffMin = Math.floor(diffMs / 60000)
-  if (diffMin < 1) return '刚刚'
-  if (diffMin < 60) return `${diffMin} 分钟前`
+  if (diffMin < 1) return w?.justNow || '刚刚'
+  if (diffMin < 60) return `${diffMin}${w?.minutesAgo || ' 分钟前'}`
   const diffHour = Math.floor(diffMin / 60)
-  if (diffHour < 24) return `${diffHour} 小时前`
+  if (diffHour < 24) return `${diffHour}${w?.hoursAgo || ' 小时前'}`
   return value.slice(0, 16).replace('T', ' ')
 }
 
-const categories: Array<{
+const categories = computed<Array<{
   key: 'model' | 'industry' | 'openSource' | 'tool' | 'china'
   title: string
   kicker: string
   description: string
-}> = [
-  { key: 'model', title: '模型动态', kicker: 'Models', description: '新模型、榜单、价格和上下文窗口变化。' },
-  { key: 'industry', title: '行业新闻', kicker: 'Industry', description: '大厂产品、平台能力和商业化趋势。' },
-  { key: 'openSource', title: '开源项目', kicker: 'Open Source', description: '值得关注的开源模型、框架和本地部署方向。' },
-  { key: 'tool', title: 'AI 工具', kicker: 'Tools', description: '开发者工具、评测、可观测性和效率产品。' },
-  { key: 'china', title: '国内 AI', kicker: 'China AI', description: '中国模型、产品和价格性能动态。' },
-]
+}>>(() => {
+  const w = loc.t.weekly
+  return [
+    { key: 'model', title: w?.catModel || '模型动态', kicker: 'Models', description: w?.catModelDesc || '新模型、榜单、价格和上下文窗口变化。' },
+    { key: 'industry', title: w?.catIndustry || '行业新闻', kicker: 'Industry', description: w?.catIndustryDesc || '大厂产品、平台能力和商业化趋势。' },
+    { key: 'openSource', title: w?.catOpenSource || '开源项目', kicker: 'Open Source', description: w?.catOpenSourceDesc || '值得关注的开源模型、框架和本地部署方向。' },
+    { key: 'tool', title: w?.catTool || 'AI 工具', kicker: 'Tools', description: w?.catToolDesc || '开发者工具、评测、可观测性和效率产品。' },
+    { key: 'china', title: w?.catChina || '国内 AI', kicker: 'China AI', description: w?.catChinaDesc || '中国模型、产品和价格性能动态。' },
+  ]
+})
 
 function itemsByCategory(category: string) {
   return weeklyItems.value.filter((item) => item.category === category)

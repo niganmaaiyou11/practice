@@ -1,6 +1,6 @@
 <template>
   <div class="detail-shell">
-    <router-link to="/weekly" class="back-link">← 返回 AI 周报</router-link>
+    <router-link to="/weekly" class="back-link">{{ loc.t.weekly?.backToWeekly || '← 返回 AI 周报' }}</router-link>
 
     <article v-if="item" class="article-card anim-fade-up">
       <header class="article-header">
@@ -8,12 +8,12 @@
         <h1>{{ item.title }}</h1>
         <p class="dek">{{ item.summary }}</p>
         <a v-if="item.source_url !== '#'" :href="item.source_url" target="_blank" rel="noopener noreferrer" class="source-link">
-          来源：{{ item.source_name }}
+          {{ loc.t.weekly?.source || '来源：' }}{{ item.source_name }}
         </a>
       </header>
 
       <section class="takeaway-box">
-        <p>要点</p>
+        <p>{{ loc.t.weekly?.takeaways || '要点' }}</p>
         <ul>
           <li v-for="takeaway in item.takeaways" :key="takeaway">{{ takeaway }}</li>
         </ul>
@@ -25,9 +25,9 @@
     </article>
 
     <section v-else class="article-card empty-state">
-      <h1>未找到这条周报</h1>
-      <p>这条内容可能已移动或被移除。</p>
-      <router-link to="/weekly">回到 AI 周报</router-link>
+      <h1>{{ loc.t.weekly?.notFound || '未找到这条周报' }}</h1>
+      <p>{{ loc.t.weekly?.notFoundDesc || '这条内容可能已移动或被移除。' }}</p>
+      <router-link to="/weekly">{{ loc.t.weekly?.backLink || '回到 AI 周报' }}</router-link>
     </section>
   </div>
 </template>
@@ -38,6 +38,9 @@ import { useRoute } from 'vue-router'
 import { fetchWeeklyItem } from '../api/weekly'
 import { findWeeklyItem } from '../data/weekly'
 import type { WeeklyItem } from '../types'
+import { useLocaleStore } from '../stores/locale'
+
+const loc = useLocaleStore()
 
 const route = useRoute()
 const item = ref<WeeklyItem | null>(null)
@@ -61,12 +64,13 @@ onMounted(async () => {
 })
 
 function categoryLabel(category: string) {
+  const w = loc.t.weekly
   const labels: Record<string, string> = {
-    model: '模型动态',
-    industry: '行业新闻',
-    openSource: '开源项目',
-    tool: 'AI 工具',
-    china: '国内 AI',
+    model: w?.catModel || '模型动态',
+    industry: w?.catIndustry || '行业新闻',
+    openSource: w?.catOpenSource || '开源项目',
+    tool: w?.catTool || 'AI 工具',
+    china: w?.catChina || '国内 AI',
   }
   return labels[category] || category
 }

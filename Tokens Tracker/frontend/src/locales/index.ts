@@ -107,6 +107,21 @@ export interface Messages {
   changelog: {
     navLabel: string; title: string; summary: string; details: string; noEntries: string; expandAll: string; collapseAll: string
   }
+  weekly: {
+    navLabel: string; pageTitle: string; heroSubtitle: string
+    refreshing: string; refresh: string
+    feedStatus: string; lastRefresh: string; items: string; failed: string
+    refreshDone: string; refreshItems: string; refreshSourcesOk: string
+    weeklySummary: string; viewLeaderboard: string; readMore: string
+    neverRefreshed: string; justNow: string; minutesAgo: string; hoursAgo: string
+    catModel: string; catModelDesc: string
+    catIndustry: string; catIndustryDesc: string
+    catOpenSource: string; catOpenSourceDesc: string
+    catTool: string; catToolDesc: string
+    catChina: string; catChinaDesc: string
+    backToWeekly: string; source: string; takeaways: string
+    notFound: string; notFoundDesc: string; backLink: string
+  }
 }
 
 const translations: Record<Locale, Messages> = {
@@ -280,6 +295,21 @@ const translations: Record<Locale, Messages> = {
     changelog: {
       navLabel: 'Changelog', title: 'Changelog', summary: 'Summary', details: 'Details', noEntries: 'No changelog entries yet.', expandAll: 'Expand All', collapseAll: 'Collapse All',
     },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI Weekly', heroSubtitle: 'Curated weekly updates on AI models, tools, open source, and China AI — helping you decide what matters faster.',
+      refreshing: 'Refreshing...', refresh: 'Refresh',
+      feedStatus: 'Feed Status', lastRefresh: 'Last refresh: ', items: ' items', failed: 'Failed',
+      refreshDone: 'Refresh complete: ', refreshItems: ' new items, ', refreshSourcesOk: ' sources succeeded',
+      weeklySummary: 'Weekly Summary', viewLeaderboard: 'View Leaderboard', readMore: 'Read more',
+      neverRefreshed: 'Never refreshed', justNow: 'Just now', minutesAgo: ' min ago', hoursAgo: ' hr ago',
+      catModel: 'Model Updates', catModelDesc: 'New models, benchmarks, pricing, and context window changes.',
+      catIndustry: 'Industry News', catIndustryDesc: 'Big tech products, platform capabilities, and business trends.',
+      catOpenSource: 'Open Source', catOpenSourceDesc: 'Notable open-source models, frameworks, and local deployment directions.',
+      catTool: 'AI Tools', catToolDesc: 'Developer tools, evaluation, observability, and productivity products.',
+      catChina: 'China AI', catChinaDesc: 'Chinese models, products, and price-performance developments.',
+      backToWeekly: '← Back to AI Weekly', source: 'Source: ', takeaways: 'Takeaways',
+      notFound: 'Weekly Not Found', notFoundDesc: 'This content may have been moved or removed.', backLink: 'Back to AI Weekly',
+    },
   },
   'zh-CN': {
     app: { title: 'AI Token 用量统计', dashboard: '仪表盘', records: '记录列表', addRecord: '添加记录', settings: '设置' },
@@ -450,6 +480,21 @@ const translations: Record<Locale, Messages> = {
     },
     changelog: {
       navLabel: '更新日志', title: '更新日志', summary: '摘要', details: '详情', noEntries: '暂无更新记录。', expandAll: '展开全部', collapseAll: '收起全部',
+    },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI 周报', heroSubtitle: '精选每周 AI 模型、工具、开源与国内动态，帮助你更快判断哪些变化值得关注。',
+      refreshing: '刷新中...', refresh: '手动刷新',
+      feedStatus: '数据源状态', lastRefresh: '最后刷新：', items: ' 条', failed: '失败',
+      refreshDone: '刷新完成：新增 ', refreshItems: ' 条，', refreshSourcesOk: ' 个源成功',
+      weeklySummary: '本周摘要', viewLeaderboard: '查看模型榜单', readMore: '阅读全文',
+      neverRefreshed: '未刷新', justNow: '刚刚', minutesAgo: ' 分钟前', hoursAgo: ' 小时前',
+      catModel: '模型动态', catModelDesc: '新模型、榜单、价格和上下文窗口变化。',
+      catIndustry: '行业新闻', catIndustryDesc: '大厂产品、平台能力和商业化趋势。',
+      catOpenSource: '开源项目', catOpenSourceDesc: '值得关注的开源模型、框架和本地部署方向。',
+      catTool: 'AI 工具', catToolDesc: '开发者工具、评测、可观测性和效率产品。',
+      catChina: '国内 AI', catChinaDesc: '中国模型、产品和价格性能动态。',
+      backToWeekly: '← 返回 AI 周报', source: '来源：', takeaways: '要点',
+      notFound: '未找到这条周报', notFoundDesc: '这条内容可能已移动或被移除。', backLink: '回到 AI 周报',
     },
   },
   ja: {
@@ -622,6 +667,21 @@ const translations: Record<Locale, Messages> = {
     changelog: {
       navLabel: '更新履歴', title: '更新履歴', summary: '概要', details: '詳細', noEntries: '更新履歴はまだありません。', expandAll: 'すべて展開', collapseAll: 'すべて折りたたむ',
     },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI ウィークリー', heroSubtitle: 'AIモデル、ツール、オープンソース、中国AIの週間まとめ。注目すべき変化を素早く見極めます。',
+      refreshing: '更新中...', refresh: '更新',
+      feedStatus: 'フィード状態', lastRefresh: '最終更新：', items: ' 件', failed: '失敗',
+      refreshDone: '更新完了：新規 ', refreshItems: ' 件、', refreshSourcesOk: ' ソース成功',
+      weeklySummary: '今週のサマリー', viewLeaderboard: 'ランキングを見る', readMore: '続きを読む',
+      neverRefreshed: '未更新', justNow: 'たった今', minutesAgo: ' 分前', hoursAgo: ' 時間前',
+      catModel: 'モデル動向', catModelDesc: '新モデル、ベンチマーク、価格、コンテキストウィンドウの変更。',
+      catIndustry: '業界ニュース', catIndustryDesc: '大手テックの製品、プラットフォーム機能、ビジネストレンド。',
+      catOpenSource: 'オープンソース', catOpenSourceDesc: '注目すべきオープンソースモデル、フレームワーク、ローカル展開の方向性。',
+      catTool: 'AIツール', catToolDesc: '開発ツール、評価、可観測性、生産性製品。',
+      catChina: '中国AI', catChinaDesc: '中国モデル、製品、価格対パフォーマンスの動向。',
+      backToWeekly: '← AI ウィークリーに戻る', source: '出典：', takeaways: '要点',
+      notFound: 'ウィークリーが見つかりません', notFoundDesc: 'このコンテンツは移動または削除された可能性があります。', backLink: 'AI ウィークリーに戻る',
+    },
   },
   ko: {
     app: { title: 'AI Token 트래커', dashboard: '대시보드', records: '기록 목록', addRecord: '기록 추가', settings: '설정' },
@@ -792,6 +852,21 @@ const translations: Record<Locale, Messages> = {
     },
     changelog: {
       navLabel: '변경 로그', title: '변경 로그', summary: '요약', details: '상세', noEntries: '아직 변경 로그가 없습니다.', expandAll: '모두 펼치기', collapseAll: '모두 접기',
+    },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI 위클리', heroSubtitle: 'AI 모델, 도구, 오픈소스, 중국 AI 주간 요약. 주목할 변화를 더 빠르게 판단하세요.',
+      refreshing: '새로고침 중...', refresh: '새로고침',
+      feedStatus: '피드 상태', lastRefresh: '마지막 새로고침: ', items: '개', failed: '실패',
+      refreshDone: '새로고침 완료: 신규 ', refreshItems: '개, ', refreshSourcesOk: '개 소스 성공',
+      weeklySummary: '이번 주 요약', viewLeaderboard: '리더보드 보기', readMore: '자세히 보기',
+      neverRefreshed: '새로고침 없음', justNow: '방금', minutesAgo: '분 전', hoursAgo: '시간 전',
+      catModel: '모델 동향', catModelDesc: '새 모델, 벤치마크, 가격, 컨텍스트 윈도우 변경.',
+      catIndustry: '업계 뉴스', catIndustryDesc: '대형 테크 제품, 플랫폼 기능, 비즈니스 트렌드.',
+      catOpenSource: '오픈소스', catOpenSourceDesc: '주목할 오픈소스 모델, 프레임워크, 로컬 배포 방향.',
+      catTool: 'AI 도구', catToolDesc: '개발자 도구, 평가, 관찰성, 생산성 제품.',
+      catChina: '중국 AI', catChinaDesc: '중국 모델, 제품, 가격 대비 성능 동향.',
+      backToWeekly: '← AI 위클리로 돌아가기', source: '출처: ', takeaways: '핵심要点',
+      notFound: '위클리를 찾을 수 없습니다', notFoundDesc: '이 콘텐츠는 이동되었거나 삭제되었을 수 있습니다.', backLink: 'AI 위클리로 돌아가기',
     },
   },
   ru: {
@@ -964,6 +1039,21 @@ const translations: Record<Locale, Messages> = {
     changelog: {
       navLabel: 'Журнал', title: 'Журнал изменений', summary: 'Кратко', details: 'Подробно', noEntries: 'Записей пока нет.', expandAll: 'Развернуть всё', collapseAll: 'Свернуть всё',
     },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI Еженедельник', heroSubtitle: 'Еженедельный обзор ИИ-моделей, инструментов, открытого кода и китайского ИИ — быстрее понять, что важно.',
+      refreshing: 'Обновление...', refresh: 'Обновить',
+      feedStatus: 'Статистика', lastRefresh: 'Последнее обновление: ', items: ' записей', failed: 'Ошибка',
+      refreshDone: 'Обновление завершено: ', refreshItems: ' новых, ', refreshSourcesOk: ' источников успешно',
+      weeklySummary: 'Итоги недели', viewLeaderboard: 'Рейтинг моделей', readMore: 'Читать далее',
+      neverRefreshed: 'Не обновлено', justNow: 'Только что', minutesAgo: ' мин. назад', hoursAgo: ' ч. назад',
+      catModel: 'Модели', catModelDesc: 'Новые модели, бенчмарки, цены и изменения контекстных окон.',
+      catIndustry: 'Новости отрасли', catIndustryDesc: 'Продукты крупных компаний, возможности платформ и бизнес-тренды.',
+      catOpenSource: 'Открытый код', catOpenSourceDesc: 'Заметные открытые модели, фреймворки и направления локального развёртывания.',
+      catTool: 'ИИ-инструменты', catToolDesc: 'Инструменты разработки, оценка, наблюдаемость и продуктивность.',
+      catChina: 'Китайский ИИ', catChinaDesc: 'Китайские модели, продукты и соотношение цены и качества.',
+      backToWeekly: '← Назад к AI Еженедельнику', source: 'Источник: ', takeaways: 'Ключевые выводы',
+      notFound: 'Выпуск не найден', notFoundDesc: 'Этот контент мог быть перемещён или удалён.', backLink: 'Назад к AI Еженедельнику',
+    },
   },
   fr: {
     app: { title: 'Suivi des Tokens IA', dashboard: 'Tableau de bord', records: 'Registres', addRecord: 'Ajouter', settings: 'Paramètres' },
@@ -1135,6 +1225,21 @@ const translations: Record<Locale, Messages> = {
     changelog: {
       navLabel: 'Journal', title: 'Journal des modifications', summary: 'Résumé', details: 'Détails', noEntries: 'Aucune entrée pour le moment.', expandAll: 'Tout développer', collapseAll: 'Tout réduire',
     },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI Hebdo', heroSubtitle: 'Résumé hebdomadaire des modèles IA, outils, open source et IA chinoise — pour identifier plus vite ce qui compte.',
+      refreshing: 'Actualisation...', refresh: 'Actualiser',
+      feedStatus: 'État des sources', lastRefresh: 'Dernière actualisation : ', items: ' articles', failed: 'Échec',
+      refreshDone: 'Actualisation terminée : ', refreshItems: ' nouveaux, ', refreshSourcesOk: ' sources réussies',
+      weeklySummary: 'Résumé de la semaine', viewLeaderboard: 'Voir le classement', readMore: 'Lire la suite',
+      neverRefreshed: 'Jamais actualisé', justNow: 'À l\'instant', minutesAgo: ' min', hoursAgo: ' h',
+      catModel: 'Modèles', catModelDesc: 'Nouveaux modèles, benchmarks, prix et changements de fenêtre de contexte.',
+      catIndustry: 'Actualités', catIndustryDesc: 'Produits des géants tech, capacités des plateformes et tendances business.',
+      catOpenSource: 'Open Source', catOpenSourceDesc: 'Modèles open source, frameworks et orientations de déploiement local.',
+      catTool: 'Outils IA', catToolDesc: 'Outils développeur, évaluation, observabilité et productivité.',
+      catChina: 'IA Chinoise', catChinaDesc: 'Modèles chinois, produits et développements prix-performance.',
+      backToWeekly: '← Retour à AI Hebdo', source: 'Source : ', takeaways: 'Points clés',
+      notFound: 'Article introuvable', notFoundDesc: 'Ce contenu a peut-être été déplacé ou supprimé.', backLink: 'Retour à AI Hebdo',
+    },
   },
   es: {
     app: { title: 'Rastreador de Tokens IA', dashboard: 'Panel', records: 'Registros', addRecord: 'Añadir', settings: 'Ajustes' },
@@ -1305,6 +1410,21 @@ const translations: Record<Locale, Messages> = {
     },
     changelog: {
       navLabel: 'Registro', title: 'Registro de cambios', summary: 'Resumen', details: 'Detalles', noEntries: 'Aún no hay entradas.', expandAll: 'Expandir todo', collapseAll: 'Colapsar todo',
+    },
+    weekly: {
+      navLabel: 'AI Weekly', pageTitle: 'AI Semanal', heroSubtitle: 'Resumen semanal de modelos IA, herramientas, código abierto e IA china — para decidir más rápido qué importa.',
+      refreshing: 'Actualizando...', refresh: 'Actualizar',
+      feedStatus: 'Estado de fuentes', lastRefresh: 'Última actualización: ', items: ' artículos', failed: 'Error',
+      refreshDone: 'Actualización completa: ', refreshItems: ' nuevos, ', refreshSourcesOk: ' fuentes exitosas',
+      weeklySummary: 'Resumen semanal', viewLeaderboard: 'Ver ranking', readMore: 'Leer más',
+      neverRefreshed: 'Sin actualizar', justNow: 'Ahora', minutesAgo: ' min', hoursAgo: ' h',
+      catModel: 'Modelos', catModelDesc: 'Nuevos modelos, benchmarks, precios y cambios de ventana de contexto.',
+      catIndustry: 'Noticias', catIndustryDesc: 'Productos de grandes tecnológicas, capacidades de plataforma y tendencias.',
+      catOpenSource: 'Código Abierto', catOpenSourceDesc: 'Modelos open source destacados, frameworks y despliegue local.',
+      catTool: 'Herramientas IA', catToolDesc: 'Herramientas de desarrollo, evaluación, observabilidad y productividad.',
+      catChina: 'IA China', catChinaDesc: 'Modelos chinos, productos y desarrollos precio-rendimiento.',
+      backToWeekly: '← Volver a AI Semanal', source: 'Fuente: ', takeaways: 'Puntos clave',
+      notFound: 'Artículo no encontrado', notFoundDesc: 'Este contenido puede haber sido movido o eliminado.', backLink: 'Volver a AI Semanal',
     },
   },
 }
