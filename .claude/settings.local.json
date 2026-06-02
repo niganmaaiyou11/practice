@@ -8,7 +8,29 @@
       "Bash(python -c ' *)",
       "WebFetch(domain:llm-stats.com)",
       "WebSearch",
-      "Bash(git -C \"c:/Users/aiyouniganma512/Desktop/git\" ls-files --cached)"
+      "Bash(git -C \"c:/Users/aiyouniganma512/Desktop/git\" ls-files --cached)",
+      "Bash(python *)",
+      "Bash(npm *)",
+      "mcp__puppeteer__puppeteer_navigate",
+      "mcp__puppeteer__puppeteer_screenshot",
+      "mcp__puppeteer__puppeteer_evaluate",
+      "mcp__puppeteer__puppeteer_click",
+      "mcp__puppeteer__puppeteer_fill",
+      "Bash(git push *)",
+      "mcp__git__git_status",
+      "Bash(gh auth *)",
+      "mcp__github__create_repository",
+      "Bash(git remote *)",
+      "mcp__git__git_add",
+      "mcp__git__git_commit",
+      "mcp__github__get_file_contents",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(git add *)",
+      "WebFetch(domain:github.com)",
+      "mcp__github__list_commits",
+      "Bash(git checkout *)",
+      "Bash(git commit *)"
     ]
   }
 }
