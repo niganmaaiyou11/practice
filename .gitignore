@@ -1,0 +1,4 @@
+# Ignore .git directories in subprojects
+Tokens Tracker/.git/
+tool/.git/
+.claude/worktrees/
