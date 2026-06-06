@@ -5,3 +5,6 @@
 [submodule "tool"]
 	path = tool
 	url = https://github.com/niganmaaiyou11/tool.git
+[submodule "Home Sales Management System"]
+	path = Home Sales Management System
+	url = https://github.com/niganmaaiyou11/Home-Sales-Management-System.git
